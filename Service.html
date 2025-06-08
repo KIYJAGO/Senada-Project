@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senada Pictures</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="src/output.css">
+  <link rel="icon" href="IMG/Logo/Vector Logo BLACK.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+<!--Navbar Begin-->
+  <nav>
+    <div class="h-12 flex items-center px-0.5">
+      <a href="index.html" id="topBarLogo">
+        <img src="IMG/Logo/SENADA Resize.png" alt="Logo" class="h-24 py-1 object-contain">
+      </a>
+    </div>
+  
+    <div class="menu-container">
+      <div class="dropdown">
+        <button class="dropdown-toggle" onclick="toggleDropdown('photoDropdown', this)">
+          Photography <span class="arrow">▼</span>
+        </button>
+        <div id="photoDropdown" class="dropdown-content">
+          <a href="#">Pre Wedding</a>
+          <a href="#">Wedding</a>
+          <!-- <a href="#">Product</a>
+          <a href="#">Food</a> -->
+        </div>
+      </div>
+  
+      <div class="dropdown">
+        <button class="dropdown-toggle" onclick="toggleDropdown('videoDropdown', this)">
+          Videography <span class="arrow">▼</span>
+        </button>
+        <div id="videoDropdown" class="dropdown-content">
+          <a href="#">Wedding</a>
+          <!-- <a href="#">Commercial</a>
+          <a href="#">Event</a> -->
+        </div>
+      </div>
+    </div>
+      <div id="hamburgerButton" class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+  </nav>
+<!-- Navbar End -->
+
+<!-- Side Menu Begin -->
+<div class="side-menu" id="sideMenu">
+  <div class="top">
+    <div class="nav-logo" id="sideBarLogo">
+        <a href="index.html">
+          <img src="IMG/Logo/SENADA Resize.png" alt="Senada Logo">
+        </a>
+    </div>
+      <a href="Photography.html">Photography</a>
+      <a href="Videography.html">Videography</a>
+      <a href="About.html">About</a>
+      <a href="Service.html">Service</a>
+      <a href="Contact.html">Contact</a>
+  </div>
+  <div class="bottom">
+    <div class="contact-item">
+        <a href="https://wa.me/+6285339047862" target="_blank" class="icon"><i class="fa-brands fa-whatsapp"></i><span>+628123456789</span></a>
+    </div>
+    <div class="contact-item">
+      <a href="https://www.instagram.com/senadapictures?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="icon"><i class="fa-brands fa-instagram"></i><span>@senadapictures</span></a>
+    </div>
+    <div class="contact-item">
+      <a href="https://maps.app.goo.gl/pJCjfqzjXT8QCr5k9" target="_blank" class="icon"><i class="fa-solid fa-location-dot"></i><span>Jl. Apa Aja Lah No.24</span></a>
+    </div>
+    <div class="contact-item">
+      <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="icon"><i class="fa-regular fa-envelope"></i><span>wongirengjembuten365@gmail.com</span></a>
+    </div>
+    <div class="powered">Bali 80361, Indonesia</div>
+    <div class="powered-photo">&copy; Powered by | Photos by | Terms of Service | Privacy Policy</div>
+  </div>
+</div>
+<!-- Side Menu End -->
+
+<!--Main Begin-->
+<div class="pt-7">
+  <section class="py-24 px-4 text-black">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Judul dan deskripsi atas -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-serif pb-6">Our Services</h2>
+        <p class="text-gray-600 text-sm max-w-2xl text-justify mx-auto">
+          Our photography services are designed to capture the essence of life's most meaningful moments. We specialize in portrait photography that brings out your unique personality, couple sessions that celebrate connection, wedding photography that preserves the beauty of your big day, and family sessions that capture the love shared among generations. Each session is tailored to reflect your style and vision, and we offer a variety of tone colors, allowing you to choose the mood and feel that resonates most with you. We are based in Bali but available for travel, we’re excited to help you create timeless, authentic memories wherever you are, biar isi aja sih ini sebenernya yang ytta aja ygy ya taik.
+        </p>
+      </div>
+
+      <!-- Responsive service section -->
+      <div class="flex flex-col md:grid md:grid-cols-2 md:gap-8 lg:gap-10 items-center ">
+        <!-- Gambar -->
+        <div>
+          <img src="IMG/Background 4.jpg" alt="Portrait session" class="w-full rounded-md shadow-md object-cover"/>
+        </div>
+
+        <!-- Teks -->
+        <div class="text-black pb-5">
+          <div class="">
+            <h3 class="font-black text-3xl md:text-2xl lg:text-6xl mt-4 mb-6 md:mb-2 lg:mb-8">Bali Pre Wedding Session</h3>
+            <p class="text-gray-700 text-sm font-semibold md:text-1xl lg:text-2xl mb-4 md:mb-4 lg:mb-8">Starting at IDR 1,000,000 or USD 65</p>
+            <p class="text-justify lg:tex-2xl md:text-sm md:mb-1 mb-2">
+              We offer Bali portrait session packages of 60 and 120 minutes. The session includes at least 50 beautifully edited photos that capture your moments.
+            </p>
+            <p class="text-sm text-justify md:text-sm md:mb-3 lg:mb-8 mb-6 ">
+              You can choose the color tone for the photos, allowing your photos to be unique as you are. Whether a short or long session, we pay attention to every detail.
+            </p>
+            <a href="#">
+              <button class="border border-black px-4 py-2 md:px-4 md:py-0.5 lg:px-6 lg:py-3 rounded hover:bg-black hover:text-white transition cursor-pointer">
+                <p class="lg:text-auto md:text-auto">Book Now</p>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:grid md:grid-cols-2 md:gap-8 lg:gap-10 items-center mt-16">        
+      <!-- Gambar -->
+      <div>
+        <img src="IMG/Background 1.jpg" alt="Portrait session" class="w-full rounded-md shadow-md object-cover"/>
+      </div>
+
+      <!-- Teks -->
+      <div class="text-black pb-5">
+        <h3 class="font-black text-3xl md:text-2xl lg:text-6xl mt-4 mb-6 md:mb-2 lg:mb-8">Bali Wedding Session</h3>
+        <p class="text-gray-700 text-sm font-semibold md:text-1xl lg:text-2xl mb-4 md:mb-4 lg:mb-8">Starting at IDR 1,000,000 or USD 65</p>
+        <p class="text-justify lg:tex-2xl md:text-sm md:mb-1 mb-2">
+          We offer Bali portrait session packages of 60 and 120 minutes. The session includes at least 50 beautifully edited photos that capture your moments.
+        </p>
+        <p class="text-sm text-justify md:text-sm md:mb-3 lg:mb-8 mb-6 ">
+          You can choose the color tone for the photos, allowing your photos to be unique as you are. Whether a short or long session, we pay attention to every detail.
+        </p>
+        <a href="#">
+          <button class="border border-black px-4 py-2 md:px-4 md:py-0.5 lg:px-6 lg:py-3 rounded hover:bg-black hover:text-white transition cursor-pointer">
+            <p class="lg:text-auto md:text-auto">Book Now</p>
+          </button>
+        </a>
+      </div>
+    </div>
+
+    </div>
+  </section>
+</div>
+
+<!--Main End-->
+
+<!--Footer Begin-->
+<footer class="bg-white border-t border-dashed border-gray-400 mt-10">
+  <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-start gap-8">
+    
+    <div>
+      <a href="index.html">
+        <img src="IMG/Logo/NEW SENADA PICTURES LOGO.png" alt="Senada Pictures" class="h-20 mb-2">
+      </a>
+    </div>
+    
+    <div class="text-sm/5 text-gray-600">
+      <p class="text-xs mb-1">by appointment only</p>
+      <p class="text-xs mb-1"><a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="text-gray-800">wongirengjembuten365@gmail.com</a></p>
+      <p class="text-xs mb-1">Jl. Uluwatu II No.54, Jimbaran, Kec. Kuta Sel., Kabupaten Badung</p>
+      <p class="text-xs mb-1">Bali 80361, Indonesia</p>
+    </div>
+
+    <div class="flex space-x-4 text-gray-500 text-2xl">
+      <a href="https://wa.me/+6285339047862" target="_blank" class="hover:text-black"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/senadapictures?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-black"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="hover:text-black "><i class="fa-brands fa-facebook"></i></a>
+      <a href="#" class="hover:text-black"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+
+  <div class="text-center text-xs text-gray-500 pb-6">
+    &copy; Senada Pictures 2025
+  </div>
+</footer>
+<!--Footer End-->
+
+<!--Toggle Script-->
+<script src="toggle.js"></script>
+
+</body>
+</html>

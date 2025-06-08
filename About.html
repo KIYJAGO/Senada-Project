@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senada Pictures</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="src/output.css">
+  <link rel="icon" href="IMG/Logo/Vector Logo BLACK.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+<!--Navbar Begin-->
+  <nav>
+    <div class="h-12 flex items-center px-0.5">
+      <a href="index.html" id="topBarLogo">
+        <img src="IMG/Logo/SENADA Resize.png" alt="Logo" class="h-24 py-1 object-contain">
+      </a>
+    </div>
+  
+    <div class="menu-container">
+      <div class="dropdown">
+        <button class="dropdown-toggle" onclick="toggleDropdown('photoDropdown', this)">
+          Photography <span class="arrow">▼</span>
+        </button>
+        <div id="photoDropdown" class="dropdown-content">
+          <a href="#">Pre Wedding</a>
+          <a href="#">Wedding</a>
+          <!-- <a href="#">Product</a>
+          <a href="#">Food</a> -->
+        </div>
+      </div>
+  
+      <div class="dropdown">
+        <button class="dropdown-toggle" onclick="toggleDropdown('videoDropdown', this)">
+          Videography <span class="arrow">▼</span>
+        </button>
+        <div id="videoDropdown" class="dropdown-content">
+          <a href="#">Wedding</a>
+          <!-- <a href="#">Commercial</a>
+          <a href="#">Event</a> -->
+        </div>
+      </div>
+    </div>
+      <div id="hamburgerButton" class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+  </nav>
+<!-- Navbar End -->
+
+<!-- Side Menu Begin -->
+<div class="side-menu" id="sideMenu">
+  <div class="top">
+    <div class="nav-logo" id="sideBarLogo">
+        <a href="index.html">
+          <img src="IMG/Logo/SENADA Resize.png" alt="Senada Logo">
+        </a>
+    </div>
+      <a href="Photography.html">Photography</a>
+      <a href="Videography.html">Videography</a>
+      <a href="About.html">About</a>
+      <a href="Service.html">Service</a>
+      <a href="Contact.html">Contact</a>
+  </div>
+  <div class="bottom">
+    <div class="contact-item">
+        <a href="https://wa.me/+6285339047862" target="_blank" class="icon"><i class="fa-brands fa-whatsapp"></i><span>+628123456789</span></a>
+    </div>
+    <div class="contact-item">
+      <a href="https://www.instagram.com/senadapictures?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="icon"><i class="fa-brands fa-instagram"></i><span>@senadapictures</span></a>
+    </div>
+    <div class="contact-item">
+      <a href="https://maps.app.goo.gl/pJCjfqzjXT8QCr5k9" target="_blank" class="icon"><i class="fa-solid fa-location-dot"></i><span>Jl. Apa Aja Lah No.24</span></a>
+    </div>
+    <div class="contact-item">
+      <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="icon"><i class="fa-regular fa-envelope"></i><span>wongirengjembuten365@gmail.com</span></a>
+    </div>
+    <div class="powered">Bali 80361, Indonesia</div>
+    <div class="powered-photo">&copy; Powered by | Photos by | Terms of Service | Privacy Policy</div>
+  </div>
+</div>
+<!-- Side Menu End -->
+
+<!--Main Begin-->
+<div class="relative w-full min-h-screen pt-17">
+  <!-- Background -->
+  <img src="IMG/Background 1.jpg" alt="Who we are" class="w-full h-full object-cover absolute inset-0 z-0" />
+
+  <!-- Overlay -->
+  <div class="relative z-10 flex justify-center min-h-screen px-12 py-12 bg-black/50 backdrop-blur-none">
+    <div class="max-w-3xl text-white text-justify font-light space-y-6">
+      <h1 class="text-4xl md:text-6xl font-normal">Who we are</h1>
+      <p>
+        Our journey started in 2019, exactly before the world had been flipped upside down. We are a small but passionate team focused on capturing the most meaningful moments of your life. From portraits speaking about personalities to wedding photos telling about the beginning of their new life, families bound with love in photo shoots, and couples whose every picture tells a story. Our motto, <strong class="font-extrabold">"We do everything with love"</strong> is not just a phrase, but it’s the core of heart behind everything. We are committed to this in every session, every interaction, and every created image.
+      </p>
+      <p>
+        We’re a small business and have grown primarily through referrals. Our clients have been our biggest advocates, referring the word along and allowing us to continue with this labor of love. Also, by choosing us or recommending us to others, you help us capture more of the beautiful moments that happen in life.
+      </p>
+      <p>
+        In our portfolio, you will see photos in different tone colors; this testifies to our commitment to making each session personal and unique. We offer you the freedom to choose the tone that best matches your vision, whether it’s warm and nostalgic or modern and fresh. That is all part of the mission: to make every photo session truly feel like a reflection of who you are.
+      </p>
+    </div>
+  </div>
+</div>
+
+<h2 class="text-center text-xl tracking-[0.3em] font-medium uppercase mt-12 mb-12">Meet Our Teams</h2>
+
+<!--Card-->
+<div class="grid grid-cols-1 lg:grid-cols-2">
+  <!--Left Picture-->
+  <a href="#">
+    <div class="w-full h-full">
+      <img src="IMG/People/Mim 2.jpg" alt="Foto Atas" class="height-guide-0 w-full h-full object-cover"/>
+    </div>
+  </a>
+
+  <!--Right Text-->
+  <div class="relative bg-white p-8 md:p-12 text-sm leading-relaxed flex flex-col justify-center">
+    <!--Mark-->
+    <div class="hidden lg:block absolute left-0 top-1/4 w-4 h-4 bg-white rotate-45 -translate-x-1/2 -translate-y-1/2 z-10"></div>
+
+    <h2 class="text-sm uppercase tracking-widest font-medium mb-4">
+      <i class="fa-solid fa-camera"></i>
+      <a href="#" class="mx-4 inline-block">Loehoet Pandjaitan</a>
+      |
+      <a href="#" class="mx-4 inline-block">LORD</a>
+    </h2>
+    <p class="mb-8">
+      Don’t be fooled by the cool and collected look on his face, because beneath all that exterior, lies a deeply passionate guy who is just bursting with ideas. Robb has the eye of an eagle. He is able to capture the right moments in every events that he shoots for and he possesses the magic hands to put together different shots into a meaningful story. In addition to all that talent, Robb is a great guy. He is a really friendly dude and a superb friend. We believe that you will fall in love with him as easily as we had.
+      </p>
+  </div>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2">
+  <!--Right Picture-->
+  <a href="#" class="block w-full h-full order-1 lg:order-2">
+    <div class="w-full h-full">
+      <img src="IMG/People/Mim 1.jpg" alt="Foto Bawah" class="w-full h-full object-cover" />
+    </div>
+  </a>
+
+  <!--Left Text-->
+  <div class="relative bg-white p-8 md:p-12 text-sm leading-relaxed flex flex-col justify-center order-2 lg:order-1">
+    <!--Mark-->
+    <div class="hidden lg:block absolute right-0 top-1/6 w-4 h-4 bg-white rotate-45 translate-x-1/2 -translate-y-1/2 z-10"></div>
+
+    <h2 class="text-sm uppercase tracking-widest font-medium mb-4">
+      <i class="fa-solid fa-video"></i>
+      <a href="#" class="mx-4 inline-block">G. Rakagooning</a>
+      |
+      <a href="#" class="mx-4 inline-block">Gooners</a>
+    </h2>
+    <p class="mb-4">
+      "Techniques can always be learned but the soul of a photo undeniably belongs to the photographer." This is the quote that Gibran always carries in his mind every time he clicks on his camera. The result is a strong connection between moments, emotions and memories in his photographs.
+    </p>
+      <p class="mb-4">
+        Gibran is rather a shy guy that gets funnier once things warm up. His slapstick kind of jokes brings smiles and laughter home, all day long. He loves the afternoon cuddle-time with his little family the most, then quickly grab any camera in reach when the sun somehow cast a wacky pattern on the wall. He likes to keep his photos simple & soothing, bold & strong, captivating & sometimes bizarre.
+      </p>
+      <p class="mb-4">
+        Gibran digs in the chemistry of two lovebirds looking at each other, the sincere smiles when words of love are whispered, or simply the gentle breeze that passes between kisses. Adi loves the art of photography so much that working day feels like holiday to him!.”
+      </p>
+  </div>
+</div>
+
+<!--Card (Opsional)-->
+<div class="grid grid-cols-1 lg:grid-cols-2">
+  <!--Left Picture-->
+  <a href="#">
+    <div class="w-full h-full">
+      <img src="IMG/People/Mim 2.jpg" alt="Foto Atas" class="height-guide-0 w-full h-full object-cover"/>
+    </div>
+  </a>
+
+  <!--Right Text-->
+  <div class="relative bg-white p-8 md:p-12 text-sm leading-relaxed flex flex-col justify-center">
+    <!--Mark-->
+    <div class="hidden lg:block absolute left-0 top-1/4 w-4 h-4 bg-white rotate-45 -translate-x-1/2 -translate-y-1/2 z-10"></div>
+
+    <h2 class="text-sm uppercase tracking-widest font-medium mb-4">
+      <i class="fa-solid fa-camera"></i>
+      <a href="#" class="mx-4 inline-block">Loehoet Pandjaitan</a>
+      |
+      <a href="#" class="mx-4 inline-block">LORD</a>
+    </h2>
+    <p class="mb-8">
+      Don’t be fooled by the cool and collected look on his face, because beneath all that exterior, lies a deeply passionate guy who is just bursting with ideas. Robb has the eye of an eagle. He is able to capture the right moments in every events that he shoots for and he possesses the magic hands to put together different shots into a meaningful story. In addition to all that talent, Robb is a great guy. He is a really friendly dude and a superb friend. We believe that you will fall in love with him as easily as we had.
+      </p>
+  </div>
+</div>
+<!--Main End-->
+
+<!--Footer Begin-->
+<footer class="bg-white border-t border-dashed border-gray-400 mt-10">
+  <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-start gap-8">
+    
+    <div>
+      <a href="#">
+        <img src="IMG/Logo/NEW SENADA PICTURES LOGO.png" alt="Senada Pictures" class="h-20 mb-2">
+      </a>
+    </div>
+    
+    <div class="text-sm/5 text-gray-600">
+      <p class="text-xs mb-1">by appointment only</p>
+      <p class="text-xs mb-1"><a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="text-gray-800">wongirengjembuten365@gmail.com</a></p>
+      <p class="text-xs mb-1">Jl. Uluwatu II No.54, Jimbaran, Kec. Kuta Sel., Kabupaten Badung</p>
+      <p class="text-xs mb-1">Bali 80361, Indonesia</p>
+    </div>
+
+    <div class="flex space-x-4 text-gray-500 text-2xl">
+      <a href="https://wa.me/+6285339047862" target="_blank" class="hover:text-black"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/senadapictures?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-black"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="hover:text-black "><i class="fa-brands fa-facebook"></i></a>
+      <a href="#" class="hover:text-black"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+
+  <div class="text-center text-xs text-gray-500 pb-6">
+    &copy; Senada Pictures 2025
+  </div>
+</footer>
+<!--Footer End-->
+
+<!--Toggle Script-->
+<script src="toggle.js"></script>
+
+</body>
+</html>
