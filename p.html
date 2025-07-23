@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Parallax Axioo Style</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="bg-white text-gray-900">
+    <!--Navbar Begin-->
+  <nav>
+    <div class="h-12 md:h-12 flex items-center px-0.5">
+      <a href="#" id="topBarLogo">
+        <img src="IMG/Logo/SENADA Resize.png" alt="Logo" class="h-64 md:h-24 py-1 object-contain">
+      </a>
+    </div>
+  
+    <div class="menu-container">
+      <div class="dropdown">
+        <button class="dropdown-toggle" onclick="toggleDropdown('photoDropdown', this)">
+          Photography <span class="arrow">▼</span>
+        </button>
+        <div id="photoDropdown" class="dropdown-content">
+          <a href="Pre-Wedding.html">Pre Wedding</a>
+          <a href="Wedding.html">Wedding</a>
+          <!-- <a href="#">Product</a>
+          <a href="#">Food</a> -->
+        </div>
+      </div>
+  
+      <div class="dropdown">
+        <button class="dropdown-toggle" onclick="toggleDropdown('videoDropdown', this)">
+          Videography <span class="arrow">▼</span>
+        </button>
+        <div id="videoDropdown" class="dropdown-content">
+          <a href="Wedding.html">Wedding</a>
+          <!-- <a href="#">Commercial</a>
+          <a href="#">Event</a> -->
+        </div>
+      </div>
+    </div>
+  
+      <div id="hamburgerButton" class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+  </nav>
+
+  <!-- Side Menu Begin -->
+<div class="side-menu" id="sideMenu">
+  <div class="top">
+    <div class="nav-logo" id="sideBarLogo">
+        <a href="#">
+          <img src="IMG/Logo/SENADA Resize.png" alt="Senada Logo">
+        </a>
+    </div>
+      <a href="Photography.html">Photography</a>
+      <a href="Videography.html">Videography</a>
+      <a href="About.html">About</a>
+      <a href="Service.html">Service</a>
+      <a href="Contact.html">Contact</a>
+  </div>
+  <div class="bottom">
+    <div class="contact-item">
+        <a href="https://wa.me/+6285339047862" target="_blank" class="icon"><i class="fa-brands fa-whatsapp"></i><span>+628123456789</span></a>
+    </div>
+    <div class="contact-item">
+      <a href="https://www.instagram.com/senadapictures?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="icon"><i class="fa-brands fa-instagram"></i><span>@senadapictures</span></a>
+    </div>
+    <div class="contact-item">
+      <a href="https://maps.app.goo.gl/pJCjfqzjXT8QCr5k9" target="_blank" class="icon"><i class="fa-solid fa-location-dot"></i><span>Jl. Apa Aja Lah No.24</span></a>
+    </div>
+    <div class="contact-item">
+      <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="icon"><i class="fa-regular fa-envelope"></i><span>wongirengjembuten365@gmail.com</span></a>
+    </div>
+    <div class="powered">Bali 80361, Indonesia</div>
+    <div class="powered-photo">&copy; Powered by | Photos by | Terms of Service | Privacy Policy</div>
+  </div>
+</div>
+<!-- Side Menu End -->
+
+<!-- Tombol buka sidebar -->
+<button onclick="openSidebar()" class="p-2">☰</button>
+
+<!-- Overlay -->
+<div id="overlay" class="fixed inset-0 bg-black/40 z-40 hidden" onclick="closeSidebar()"></div>
+
+<!-- Sidebar -->
+<div id="sidebar" class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300">
+  <button onclick="closeSidebar()" class="p-4 text-right w-full">✕</button>
+  <nav class="p-4">
+    <a href="#" class="block mb-2">Home</a>
+    <a href="#" class="block mb-2">Service</a>
+    <a href="#" class="block mb-2">Contact</a>
+  </nav>
+</div>
+
+<script>
+  function openSidebar() {
+    document.getElementById('sidebar').classList.remove('translate-x-full');
+    document.getElementById('overlay').classList.remove('hidden');
+  }
+
+  function closeSidebar() {
+    document.getElementById('sidebar').classList.add('translate-x-full');
+    document.getElementById('overlay').classList.add('hidden');
+  }
+</script>
+
+</body>
+</html>

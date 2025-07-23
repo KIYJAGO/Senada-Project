@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,48 +12,35 @@
 
 <body>
 <!--Navbar Begin-->
-  <nav>
-    <div class="h-12 flex items-center px-0.5">
-      <a href="#" id="topBarLogo">
-        <img src="IMG/Logo/SENADA Resize.png" alt="Logo" class="h-24 py-1 object-contain">
-      </a>
-    </div>
-  
-    <div class="menu-container">
-      <div class="dropdown">
-        <button class="dropdown-toggle" onclick="toggleDropdown('photoDropdown', this)">
-          Photography <span class="arrow">▼</span>
-        </button>
-        <div id="photoDropdown" class="dropdown-content">
-          <a href="#">Pre Wedding</a>
-          <a href="#">Wedding</a>
-          <!-- <a href="#">Product</a>
-          <a href="#">Food</a> -->
-        </div>
-      </div>
-  
-      <div class="dropdown">
-        <button class="dropdown-toggle" onclick="toggleDropdown('videoDropdown', this)">
-          Videography <span class="arrow">▼</span>
-        </button>
-        <div id="videoDropdown" class="dropdown-content">
-          <a href="#">Wedding</a>
-          <!-- <a href="#">Commercial</a>
-          <a href="#">Event</a> -->
-        </div>
-      </div>
-    </div>
-  
-      <div id="hamburgerButton" class="hamburger" onclick="toggleMenu()">☰</div>
-    </div>
-  </nav>
+<nav id="navbar" class="fixed flex w-full z-50 shadow-md bg-white justify-between p-3 transitiion-all duration-300">
+  <div class="h-12 flex items-center px-5">
+    <a href="#" id="topBarLogo">
+      <img src="IMG/Logo/SENADA Resize.png" alt="Logo" class="h-24 py-1 object-contain">
+    </a>
+  </div>
+
+<div class="menu-container">
+<div class="dropdown hidden w-full md:block md:w-auto">
+  <button class="dropdown-toggle" onclick="toggleDropdown('photoDropdown', this)">Photography <span class="arrow">▼</span>
+  </button>
+  <div id="photoDropdown" class="dropdown-content">
+    <a href="Pre-Wedding.html">Pre Wedding</a>
+    <a href="Wedding.html">Wedding</a>
+  </div>
+</div>
+
+<div class="dropdown hidden w-full md:block md:w-auto">
+  <button class="dropdown-toggle" onclick="toggleDropdown('videoDropdown', this)">Videography <span class="arrow">▼</span>
+  </button>
+  <div id="videoDropdown" class="dropdown-content">
+    <a href="Wedding.html">Wedding</a>
+  </div>
+</div>
+</div>
+    <div id="hamburgerButton" class="hamburger md:block" onclick="toggleMenu()">☰</div>
+  </div>
+</nav>
 <!-- Navbar End -->
-
-<!-- Hero Section Begin -->
-<section class="hero" id="home">
-
-</section>
-<!-- Hero Section End -->
 
 <!-- Side Menu Begin -->
 <div class="side-menu" id="sideMenu">
@@ -83,24 +70,86 @@
       <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="icon"><i class="fa-regular fa-envelope"></i><span>wongirengjembuten365@gmail.com</span></a>
     </div>
     <div class="powered">Bali 80361, Indonesia</div>
-    <div class="powered-photo">&copy; Powered by | Photos by | Terms of Service | Privacy Policy</div>
+    <div class="powered-photo font-poppins">&copy; Powered by | Photos by | Terms of Service | Privacy Policy</div>
   </div>
 </div>
 <!-- Side Menu End -->
 
-<!--Main (Text) Begin-->
-<div class="gallery-container">
-  <div class="centered-title">
-    <h2 class="hover-underline">Latest Posts</h2>
-  </div>
-</div>
-<!--Main (Text) End-->
+<!--Hero Section-->
+<div class="relative min-h-screen bg-cover bg-center" style="background-image: url('IMG/Background 4.jpg');"></div>
+<!--Hero Section-->
 
-<!--Main (Tailwind) Begin-->
-<div class="max-w-1000px m-auto pt-auto">
-  <div class="justify-center grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto p-4">
+<!--Main Content Begin-->
+<div class="flex px-9 md:px-9 lg:px-32 mt-8">
+  <h2 class="text-[18px] mb-2 border-b-2 border-black transition-all duration-200 hover:border-b-4 active:border-b-4 active:text-black inline-block">
+    Latest Posts
+  </h2>    
+</div>
+
+<div class="flex mt-4 px-2 max-w-6xl -mb-60 mx-auto">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white p-6 rounded-s-lg">
+
+    <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+      <a href="#">
+        <img src="IMG/Background 1.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+          <div class="text-black text-sm/6 leading-tight font-medium p-6 pt-55">
+            <p>KIYJAGO</p>
+            <p>Walk of Love</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+      <a href="#">
+        <img src="IMG/Background 2.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+          <div class="text-black text-sm/6 leading-tight font-medium p-6 pt-55">
+            <p>KIYJAGO</p>
+            <p>Walk of Love</p>
+          </div>
+        </div>
+      </a>
+    </div>
     
-    <div class="relative aspect-square overflow-hidden rounded-lg group">
+    <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+      <a href="#">
+        <img src="IMG/Background 3.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+          <div class="text-black text-sm/6 leading-tight font-medium p-6 pt-55">
+            <p>KIYJAGO</p>
+            <p>Walk of Love</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+    <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+      <a href="#">
+        <img src="IMG/Background 4.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+          <div class="text-black text-sm/6 leading-tight font-medium p-6 pt-55">
+            <p>KIYJAGO</p>
+            <p>Walk of Love</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+      <a href="#">
+        <img src="IMG/Background 5.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+          <div class="text-black text-sm/6 leading-tight font-medium p-6 pt-55">
+            <p>KIYJAGO</p>
+            <p>Walk of Love</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
       <a href="#">
         <img src="IMG/Background 6.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
         <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
@@ -111,86 +160,225 @@
         </div>
       </a>
     </div>
-    <div class="relative aspect-square overflow-hidden rounded-lg group">
+    
+    <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
       <a href="#">
         <img src="IMG/Background 7.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
         <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
           <div class="text-black text-sm/6 leading-tight font-medium p-6 pt-55">
-            KIYJAGO<br>
-            Walk of Love
+            <p>KIYJAGO</p>
+            <p>Walk of Love</p>
           </div>
         </div>
       </a>
     </div>
-    <div class="relative aspect-square overflow-hidden rounded-lg group">
+    
+    <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
       <a href="#">
         <img src="IMG/Background 8.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
         <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
           <div class="text-black text-sm/6 leading-tight font-medium p-6 pt-55">
-            KIYJAGO<br>
-            Walk of Love
+            <p>KIYJAGO</p>
+            <p>Walk of Love</p>
           </div>
         </div>
       </a>
     </div>
-    <div class="relative aspect-square overflow-hidden rounded-lg group">
-      <a href="#">
-        <img src="IMG/Background 9.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-        <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
-          <div class="text-black text-sm/6 leading-tight font-medium p-6 pt-55">
-            KIYJAGO<br>
-            Walk of Love
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="relative aspect-square overflow-hidden rounded-lg group">
-      <a href="#">
-        <img src="IMG/Background 10.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-        <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
-          <div class="text-black text-sm/6 leading-tight font-medium p-6 pt-55">
-            KIYJAGO<br>
-            Walk of Love
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="relative aspect-square overflow-hidden rounded-lg group">
-      <a href="#">
-        <img src="IMG/Background 1.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-        <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
-          <div class="text-black text-sm/6 leading-tight font-medium p-6 pt-55">
-            KIYJAGO<br>
-            Walk of Love
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="relative aspect-square overflow-hidden rounded-lg group">
-      <a href="#">
-        <img src="IMG/Background 2.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-        <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
-          <div class="text-black text-sm/6 leading-tight font-medium p-6 pt-55">
-            KIYJAGO<br>
-            Walk of Love
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="relative aspect-square overflow-hidden rounded-lg group">
-      <a href="#">
-        <img src="IMG/Background 3.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-        <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
-          <div class="text-black text-sm/6 leading-tight font-medium p-6 pt-55">
-            KIYJAGO<br>
-            Walk of Love
-          </div>
-        </div>
-      </a>
-    </div>
+    
   </div>
 </div>
-<!--Main (Tailwind) Begin-->
+
+<!--Content 2-->
+<div id="secondContent">
+  <div class="bg-center relative h-[130vh] md:h-[210vh] lg:h-[200vh] z-10 w-auto overflow-hidden">
+    <div class="sticky top-0 md:top-30 lg:top-10 h-screen w-full">
+      <div id="parallax" class="w-full h-full bg-cover bg-center will-change-transform bg-black/70">
+          <a href="#">
+            <img src="IMG/Background 5.jpg" alt="Senada" class="lg:w-full">
+          </a>
+        </div>
+    </div>
+  </div>
+  
+  <section class="bg-white py-2 px-6 md:px-48 max-w-4xl mx-auto z-10">
+    <div class="opacity-0 translate-y-10 transition-all duration-700 ease-out reveal">
+      <p class="text-[11px] text-gray-500 uppercase font-poppins tracking-widest mb-8">JUN 11, 2025</p>
+      <h2 class="text-2xl md:text-3xl font-semibold mb-6">The Land of a Thousand Temples</h2>
+      <p class="text-gray-600 text-sm md:text-base text-justify leading-relaxed mb-6">
+        Known as The Land of a Thousand Temples, Bali is a place where spirituality meets breathtaking landscapes
+      </p>
+      <p class="text-gray-600 text-sm md:text-base text-justify leading-relaxed mb-8">
+        With thousands of temples across the island, each one tells a story of devotion, balance, and living tradition.
+      </p>
+      <a href="#">
+        <button class="border border-black text-xs px-4 py-1 mb-6 uppercase font-poppins hover:bg-black hover:text-white cursor-pointer">
+          More
+        </button>
+      </a>
+      <hr class="border-dashed border-gray-700 w-full max-w-[250px] sm:max-w-[435px] mb-5">
+    </div>
+  </section>
+  
+  <video muted loop controls class="w-full h-full object-cover cursor-pointer">
+    <source src="IMG/Vid 1.mp4" type="video/mp4">
+  </video>
+  
+  <section class="bg-white py-2 px-6 md:px-48 max-w-4xl mx-auto z-10 mb-12">
+    <div class="opacity-0 translate-y-10 transition-all duration-700 ease-out reveal">
+      <p class="text-[11px] text-gray-500 uppercase font-poppins tracking-widest mb-8">JUN 11, 2025</p>
+      <h2 class="text-2xl md:text-3xl font-semibold mb-6">The Land of a Thousand Temples</h2>
+      <p class="text-gray-600 text-sm md:text-base text-justify leading-relaxed mb-6">
+        Known as The Land of a Thousand Temples, Bali is a place where spirituality meets breathtaking landscapes
+      </p>
+      <p class="text-gray-600 text-sm md:text-base text-justify leading-relaxed mb-8">
+        With thousands of temples across the island, each one tells a story of devotion, balance, and living tradition.
+      </p>
+      <a href="#">
+        <button class="border border-black text-xs px-4 py-1 mb-6 uppercase font-poppins hover:bg-black hover:text-white cursor-pointer">
+          More
+        </button>
+      </a>
+      <hr class="border-dashed border-gray-700 w-full max-w-[250px] sm:max-w-[435px]">
+    </div>
+  </section>
+</div>
+
+<!--Content 3-->
+<div id="thirdContent">
+  <div class="flex px-5 md:px-12 lg:px-38">
+    <h2 class="text-[20px] md:text-[18px] border-b-1 border-black transition-all duration-200 hover:border-b-4 active:border-b-4 active:text-black inline-block">
+      Recent Posts
+    </h2>    
+  </div>
+  
+  <section class="max-w-6xl mx-auto px-14 md:px-12 mt-8 mb-12">
+  
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 md:gap-12 rounded-s-lg">
+  
+      <!--Cards-->
+      <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <a href="Content.html">
+          <img src="IMG/Background 1.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+          <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+            <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-35">
+              <p>KIYJAGO</p>
+              <p>Walk of Love</p>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <a href="#">
+          <img src="IMG/Background 2.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+          <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+            <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-35">
+              <p>KIYJAGO</p>
+              <p>Walk of Love</p>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <a href="#">
+          <img src="IMG/Background 3.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+          <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+            <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-35">
+              <p>KIYJAGO</p>
+              <p>Walk of Love</p>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <a href="#">
+          <img src="IMG/Background 4.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+          <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+            <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-35">
+              <p>KIYJAGO</p>
+              <p>Walk of Love</p>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="hidden lg:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <a href="#">
+          <img src="IMG/Background 5.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+          <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+            <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-35">
+              <p>KIYJAGO</p>
+              <p>Walk of Love</p>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="hidden lg:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <a href="#">
+          <img src="IMG/Background 6.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+          <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+            <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-35">
+              <p>KIYJAGO</p>
+              <p>Walk of Love</p>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="hidden lg:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <a href="#">
+          <img src="IMG/Background 7.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+          <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+            <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-35">
+              <p>KIYJAGO</p>
+              <p>Walk of Love</p>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="hidden lg:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <a href="#">
+          <img src="IMG/Background 8.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+          <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+            <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-35">
+              <p>KIYJAGO</p>
+              <p>Walk of Love</p>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="hidden lg:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <a href="#">
+          <img src="IMG/Background 9.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+          <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+            <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-35">
+              <p>KIYJAGO</p>
+              <p>Walk of Love</p>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="hidden lg:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <a href="#">
+          <img src="IMG/Background 10.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+          <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+            <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-35">
+              <p>KIYJAGO</p>
+              <p>Walk of Love</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+<!--Main (Tailwind) End-->
 
 <!--Footer Begin-->
 <footer class="bg-white border-t border-dashed border-gray-400 mt-10">
@@ -225,6 +413,5 @@
 
 <!--Toggle Script-->
 <script src="toggle.js"></script>
-
 </body>
 </html>
