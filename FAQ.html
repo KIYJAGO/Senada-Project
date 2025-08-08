@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senada Pictures</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="src/output.css">
+  <link rel="icon" href="IMG/Logo/Vector Logo BLACK.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+<!--Navbar Begin-->
+<nav id="navbar" class="fixed flex w-full z-50 shadow-md bg-white justify-between transitiion-all duration-300">
+  <div class="h-12 flex items-center px-1">
+    <a href="index.html" id="topBarLogo">
+      <img src="IMG/Logo/SENADA Resize.png" alt="Logo" class="h-24 py-1 object-contain">
+    </a>
+  </div>
+
+<div class="menu-container" id="topNav">
+  <div class="dropdown relative hidden md:block">
+    <button class="dropdown-toggle flex items-center gap-1" onclick="toggleDropdown('photoDropdown', this)">
+      Photography
+      <span class="arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 transform transition-transform duration-300 origin-center">
+          <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/>
+        </svg>
+      </span>
+    </button>
+  
+    <div id="photoDropdown" class="dropdown-content hidden absolute mt-2 bg-white shadow-lg rounded-sm">
+      <a href="Pre-Wedding.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Pre Wedding</a>
+      <a href="Wedding.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Wedding</a>
+    </div>
+  </div>
+
+  <div class="dropdown relative hidden md:block">
+    <button class="dropdown-toggle flex items-center gap-1" onclick="toggleDropdown('videoDropdown', this)">
+      Videography
+      <span class="arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 transform transition-transform duration-300 origin-center">
+          <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/>
+        </svg>
+      </span>
+    </button>
+    <div id="videoDropdown" class="dropdown-content hidden absolute left-0 mt-2 bg-white shadow-lg rounded-sm">
+      <a href="Vid-Wedding.html">Wedding</a>
+    </div>
+  </div>
+
+  <div id="hamburgerButton" class="hamburger md:block px-1" onclick="openSidebar()">☰</div>
+</div>
+</nav>
+<!--Navbar End-->
+
+<!--Side Menu Begin-->
+<div class="side-menu" id="sideMenu">
+  <div class="top">
+    <div>
+      <button class="btn-close font-bold cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>        
+      </button>
+    </div>
+      <a href="Photography.html">Photography</a>
+      <a href="Videography.html">Videography</a>
+      <a href="About.html">About</a>
+      <a href="Service.html">Service</a>
+      <a href="FAQ.html">FAQ</a>
+  </div>
+  <div class="bottom">
+    <div class="contact-item">
+        <a href="https://wa.me/+6285339047862" target="_blank" class="icon"><i class="fa-brands fa-whatsapp"></i><span>+628123456789</span></a>
+    </div>
+    <div class="contact-item">
+      <a href="https://www.instagram.com/senadapictures?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="icon"><i class="fa-brands fa-instagram"></i><span>@senadapictures</span></a>
+    </div>
+    <div class="contact-item">
+      <a href="https://maps.app.goo.gl/pJCjfqzjXT8QCr5k9" target="_blank" class="icon"><i class="fa-solid fa-location-dot"></i><span>Jl. Uluwatu II No.54, Jimbaran</span></a>
+    </div>
+    <div class="contact-item">
+      <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="icon"><i class="fa-regular fa-envelope"></i><span>senadapictures@gmail.com</span></a>
+    </div>
+    <div class="powered font-poppins">Bali 80361 - Indonesia</div>
+    <div class="powered-photo font-poppins">&copy; Powered by | Photos by | Terms of Service | Privacy Policy</div>
+  </div>
+</div>
+
+<div id="overlay" class="overlay fixed inset-0 bg-black/45 hidden z-101"></div>
+<!--Side Menu End-->
+
+<!--Main Begin-->
+<section class="max-w-3xl mx-auto px-6 py-20 pt-30">
+  <h2 class="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+    <h3 class="text-center text-sm tracking-widest uppercase text-gray-600 mb-8">Before Photoshoot</h3>
+  
+    <div class="space-y-2">
+  
+      <div class="border-b border-gray-300 overflow-hidden">
+        <button class="w-full px-6 py-4 text-left flex justify-between items-center faq-btn cursor-pointer">
+          <span class="text-xl text-[#1a2740] font-semibold">How do we book Bali photography session?</span>
+          <svg class="w-5 h-5 transition-transform duration-300 faq-icon text-[#1a2740]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="faq-content max-h-2 overflow-hidden px-6 transition-all duration-500 text-base text-gray-700 text-justify">
+          <p class="pb-6 pt-6">
+            I have made the booking process straightforward and convenient for you. To secure your selected date, a 50% retainer of your chosen package is needed, and please note that this fee is non-refundable. For weddings, the remaining balance will be due two weeks prior to the wedding date. For family or engagement sessions, you have the option to make the final payment in cash on the day of the photoshoot or by transfer.
+          </p>
+        </div>
+      </div>
+  
+      <div class="border-b border-gray-300 overflow-hidden">
+        <button class="w-full px-6 py-4 text-left flex justify-between items-center faq-btn cursor-pointer">
+          <span class="text-xl text-[#1a2740] font-semibold">How early in advance we should book?</span>
+          <svg class="w-5 h-5 transition-transform duration-300 faq-icon text-[#1a2740]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="faq-content max-h-2 overflow-hidden px-6 transition-all duration-500 text-base text-gray-700 text-justify">
+          <p class="pb-6 pt-6">
+            For wedding photoshoots, we recommend scheduling as early as possible to ensure the best timing. For Bali engagement or pre-wedding sessions, booking three months in advance is still an excellent option. Please note that other couples may also be interested in your chosen date, and I would hate for my availability to be limited for you. Feel free to check our availability and explore our Bali photographer session by reaching out to me today.
+        </div>
+      </div>
+  
+      <div class="border-b border-gray-300 overflow-hidden">
+        <button class="w-full px-6 py-4 text-left flex justify-between items-center faq-btn cursor-pointer">
+          <span class="text-xl text-[#1a2740] font-semibold">Do we also provide video services?</span>
+          <svg class="w-5 h-5 transition-transform duration-300 faq-icon text-[#1a2740]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="faq-content max-h-2 overflow-hidden px-6 transition-all duration-500 text-base text-gray-700 text-justify">
+          <p class="pb-6 pt-6">
+            Yes, we are pleased to offer video services as well. Additionally, I'm more than happy to collaborate with any videographer you prefer, ensuring that both your photos and video harmoniously flow together. My aim is to provide you with a smooth and cohesive experience on your special day.
+          </p>
+        </div>
+      </div>
+  
+      <div class="border-b border-gray-300 overflow-hidden">
+        <button class="w-full px-6 py-4 text-left flex justify-between items-center faq-btn cursor-pointer">
+          <span class="text-xl text-[#1a2740] font-semibold">What payment method do you accept?</span>
+          <svg class="w-5 h-5 transition-transform duration-300 faq-icon text-[#1a2740]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="faq-content max-h-2 overflow-hidden px-6 transition-all duration-500 text-base text-gray-700 text-justify">
+          <p class="pb-6 pt-6">
+            We currently accept payments through Cash and bank transfers for Mandiri and BCA. However, we are committed to expanding our payment options to accommodate various countries in the future. Thank you for your understanding.
+            <br><br>
+            We will send all the detail along with the invoice when you have confirm the booking.
+          </p>
+        </div>
+      </div>
+  
+      <div class="border-b border-gray-300 overflow-hidden">
+        <button class="w-full px-6 py-4 text-left flex justify-between items-center faq-btn cursor-pointer">
+          <span class="text-xl text-[#1a2740] font-semibold">For intimate or family session when is the best time to take photos?</span>
+          <svg class="w-5 h-5 transition-transform duration-300 faq-icon text-[#1a2740]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="faq-content max-h-2 overflow-hidden px-6 transition-all duration-500 text-base text-gray-700 text-justify">
+          <p class="pb-6 pt-6">
+            The ideal times for a photo session are during the golden hours, which occur at sunrise or sunset (6 AM-9 AM or 4:30 PM-6:30 PM). At these times, the soft, warm lighting beautifully enhances natural beauty and adds a touch of magic to your photos. Outside of these periods, the sunlight in Bali can be quite intense, as the island is near the equator, potentially leading to strong shadows and less favorable conditions. By scheduling your session during the golden hours, you'll benefit from the most flattering, natural light, producing stunning results that truly capture the essence of Bali's beauty.
+          </p>
+        </div>
+      </div>
+  
+    </div>
+  
+  <h3 class="text-center text-sm tracking-widest uppercase text-gray-600 mt-12 mb-8">After Photoshoot</h3>
+  
+    <div class="space-y-2 -mb-16">
+  
+      <div class="border-b border-gray-300 overflow-hidden">
+        <button class="w-full px-6 py-4 text-left flex justify-between items-center faq-btn cursor-pointer">
+          <span class="text-xl text-[#1a2740] font-semibold">What do we expected after the photoshoot?</span>
+          <svg class="w-5 h-5 transition-transform duration-300 faq-icon text-[#1a2740]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="faq-content max-h-2 overflow-hidden px-6 transition-all duration-500 text-base text-gray-700 text-justify">
+          <p class="pb-6 pt-6">
+            Many people ask about the status of their photos after a shoot and when they'll be ready to see them. We get how excited you are to view your amazing images. In each session, we take between 1,000 to 8,000 shots, carefully choosing photos that tell the unique story of your day. After that, we edit the images by cropping and adjusting colors to ensure they look great. Please understand that a lot of work goes into this process, and we appreciate your patience as we create your cherished memories.
+          </p>
+        </div>
+      </div>
+  
+      <div class="border-b border-gray-300 overflow-hidden">
+        <button class="w-full px-6 py-4 text-left flex justify-between items-center faq-btn cursor-pointer">
+          <span class="text-xl text-[#1a2740] font-semibold">What kind of edits does applies to selected photos?</span>
+          <svg class="w-5 h-5 transition-transform duration-300 faq-icon text-[#1a2740]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="faq-content max-h-2 overflow-hidden px-6 transition-all duration-500 text-base text-gray-700 text-justify">
+          <p class="pb-6 pt-6">
+            We prioritize essential editing techniques, such as adjusting exposure, enhancing brightness and contrast, cropping, color correction, and toning. However, we do not offer advanced digital imaging services like body reshaping or extensive retouching. Our aim is to deliver genuine and natural images that truly reflect the essence of your moments.
+          </p>
+        </div>
+      </div>
+  
+      <div class="border-b border-gray-300 overflow-hidden">
+        <button class="w-full px-6 py-4 text-left flex justify-between items-center faq-btn cursor-pointer">
+          <span class="text-xl text-[#1a2740] font-semibold">Will our photos will featured on your website?</span>
+          <svg class="w-5 h-5 transition-transform duration-300 faq-icon text-[#1a2740]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="faq-content max-h-2 overflow-hidden px-6 transition-all duration-500 text-base text-gray-700 text-justify">
+          <p class="pb-6 pt-6">
+            Yes, we would be absolutely delighted to have the opportunity to showcase your beautiful moments on our website! However, if for any reason you prefer not to have your cherished photos featured, please be sure to let us know in advance so that we can respect your wishes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--Main End-->
+
+<!--Footer Begin-->
+<footer class="bg-white border-t border-dashed border-gray-400 mt-10">
+  <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-start gap-8">
+
+    <div>
+      <a href="index.html">
+        <img src="IMG/Logo/NEW SENADA PICTURES LOGO.png" alt="Senada Pictures" class="h-20 mb-2">
+      </a>
+    </div>
+
+    <div class="text-sm/5 text-gray-600">
+      <p class="text-xs mb-1">by appointment only</p>
+      <p class="text-xs mb-1"><a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="text-gray-800">senadapictures@gmail.com</a></p>
+      <p class="text-xs mb-1">Jl. Uluwatu II No.54, Jimbaran, Kec. Kuta Sel., Kabupaten Badung</p>
+      <p class="text-xs mb-1">Bali 80361, Indonesia</p>
+    </div>
+
+    <div class="flex space-x-4 text-gray-500 text-2xl">
+      <a href="https://wa.me/+6285339047862" target="_blank" class="hover:text-black"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/senadapictures?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-black"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/" target="_blank" class="hover:text-black "><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.youtube.com/" target="_blank" class="hover:text-black"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+
+  <div class="text-center text-xs text-gray-500 pb-6">
+    &copy; Senada Pictures 2025
+  </div>
+</footer>
+<!--Footer End-->
+
+<!--Toggle Script-->
+<script src="toggle.js"></script>
+
+</body>
+</html>

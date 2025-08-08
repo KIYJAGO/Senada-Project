@@ -1,109 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sticky Parallax Axioo Style</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body class="bg-white text-gray-900">
-    <!--Navbar Begin-->
-  <nav>
-    <div class="h-12 md:h-12 flex items-center px-0.5">
-      <a href="#" id="topBarLogo">
-        <img src="IMG/Logo/SENADA Resize.png" alt="Logo" class="h-64 md:h-24 py-1 object-contain">
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senada Pictures</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="src/output.css">
+  <link rel="icon" href="IMG/Logo/Vector Logo BLACK.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+<!--Navbar Begin-->
+<nav id="navbar" class="fixed flex w-full z-50 shadow-md bg-white justify-between transitiion-all duration-300">
+  <div class="h-12 flex items-center px-2">
+    <a href="#" id="topBarLogo">
+      <img src="IMG/Logo/SENADA Resize.png" alt="Logo" class="h-24 py-1 object-contain">
+    </a>
+  </div>
+
+<div class="menu-container">
+  <div class="dropdown relative hidden md:block">
+    <button class="dropdown-toggle flex items-center gap-1" onclick="toggleDropdown('photoDropdown', this)">
+      Photography
+      <span class="arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 transform transition-transform duration-300 origin-center">
+          <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/>
+        </svg>
+      </span>
+    </button>
+  
+    <div id="photoDropdown" class="dropdown-content hidden absolute mt-2 bg-white shadow-lg rounded-sm">
+      <a href="Pre-Wedding.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Pre Wedding</a>
+      <a href="Wedding.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Wedding</a>
+    </div>
+  </div>
+  
+
+  <div class="dropdown relative hidden md:block">
+    <button class="dropdown-toggle flex items-center gap-1" onclick="toggleDropdown('videoDropdown', this)">
+      Videography
+      <span class="arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 transform transition-transform duration-300 origin-center">
+          <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/>
+        </svg>
+      </span>
+    </button>
+    <div id="videoDropdown" class="dropdown-content hidden absolute left-0 mt-2 bg-white shadow-lg rounded-sm">
+      <a href="Wedding.html">Wedding</a>
+    </div>
+  </div>
+
+  <div id="hamburgerButton" class="hamburger md:block px-1" onclick="openSidebar()">☰</div>
+
+</div>
+</nav>
+<!-- Navbar End -->
+
+<!-- Side Menu Begin -->
+<!-- Side Bar -->
+<div id="sideMenu" class="side-menu fixed right-0 top-0 w-72 h-full bg-white shadow-lg z-40 hidden">
+  <div class="top p-4">
+
+    <!-- Menu Links -->
+    <nav class="flex flex-col space-y-4">
+      <a href="Photography.html" class="font-semibold">Photography</a>
+      <a href="Videography.html" class="font-semibold">Videography</a>
+      <a href="About.html" class="font-semibold">About</a>
+      <a href="Service.html" class="font-semibold">Service</a>
+      <a href="Contact.html" class="font-semibold">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Bottom Contact Info -->
+  <div class="bottom p-4 mt-auto space-y-3">
+    <div class="contact-item">
+      <a href="https://wa.me/+628" target="_blank" class="icon flex items-center gap-2">
+        <i class="fa-brands fa-whatsapp"></i><span>+628123456789</span>
       </a>
     </div>
-  
-    <div class="menu-container">
-      <div class="dropdown">
-        <button class="dropdown-toggle" onclick="toggleDropdown('photoDropdown', this)">
-          Photography <span class="arrow">▼</span>
-        </button>
-        <div id="photoDropdown" class="dropdown-content">
-          <a href="Pre-Wedding.html">Pre Wedding</a>
-          <a href="Wedding.html">Wedding</a>
-          <!-- <a href="#">Product</a>
-          <a href="#">Food</a> -->
-        </div>
-      </div>
-  
-      <div class="dropdown">
-        <button class="dropdown-toggle" onclick="toggleDropdown('videoDropdown', this)">
-          Videography <span class="arrow">▼</span>
-        </button>
-        <div id="videoDropdown" class="dropdown-content">
-          <a href="Wedding.html">Wedding</a>
-          <!-- <a href="#">Commercial</a>
-          <a href="#">Event</a> -->
-        </div>
-      </div>
+    <div class="contact-item">
+      <a href="https://www.instagram.com/senadapictures" target="_blank" class="icon flex items-center gap-2">
+        <i class="fa-brands fa-instagram"></i><span>@senadapictures</span>
+      </a>
     </div>
-  
-      <div id="hamburgerButton" class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="contact-item">
+      <a href="https://maps.app.goo.gl/pJCjfqzjXT8QCr5k9" target="_blank" class="icon flex items-center gap-2">
+        <i class="fa-solid fa-location-dot"></i><span>Jl. Apa Aja Lah No.24</span>
+      </a>
     </div>
-  </nav>
+    <div class="contact-item">
+      <a href="mailto:wongirengjembuten365@gmail.com" class="icon flex items-center gap-2">
+        <i class="fa-regular fa-envelope"></i><span>wongirengjembuten365@gmail.com</span>
+      </a>
+    </div>
 
-  <!-- Side Menu Begin -->
-<div class="side-menu" id="sideMenu">
-  <div class="top">
-    <div class="nav-logo" id="sideBarLogo">
-        <a href="#">
-          <img src="IMG/Logo/SENADA Resize.png" alt="Senada Logo">
-        </a>
-    </div>
-      <a href="Photography.html">Photography</a>
-      <a href="Videography.html">Videography</a>
-      <a href="About.html">About</a>
-      <a href="Service.html">Service</a>
-      <a href="Contact.html">Contact</a>
-  </div>
-  <div class="bottom">
-    <div class="contact-item">
-        <a href="https://wa.me/+6285339047862" target="_blank" class="icon"><i class="fa-brands fa-whatsapp"></i><span>+628123456789</span></a>
-    </div>
-    <div class="contact-item">
-      <a href="https://www.instagram.com/senadapictures?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="icon"><i class="fa-brands fa-instagram"></i><span>@senadapictures</span></a>
-    </div>
-    <div class="contact-item">
-      <a href="https://maps.app.goo.gl/pJCjfqzjXT8QCr5k9" target="_blank" class="icon"><i class="fa-solid fa-location-dot"></i><span>Jl. Apa Aja Lah No.24</span></a>
-    </div>
-    <div class="contact-item">
-      <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="icon"><i class="fa-regular fa-envelope"></i><span>wongirengjembuten365@gmail.com</span></a>
-    </div>
-    <div class="powered">Bali 80361, Indonesia</div>
-    <div class="powered-photo">&copy; Powered by | Photos by | Terms of Service | Privacy Policy</div>
+    <div class="powered text-xs text-gray-500 pt-4">Bali 80361, Indonesia</div>
+    <div class="powered-photo font-poppins text-xs text-gray-500">&copy; Powered by | Photos by | Terms of Service | Privacy Policy</div>
   </div>
 </div>
-<!-- Side Menu End -->
-
-<!-- Tombol buka sidebar -->
-<button onclick="openSidebar()" class="p-2">☰</button>
 
 <!-- Overlay -->
-<div id="overlay" class="fixed inset-0 bg-black/40 z-40 hidden" onclick="closeSidebar()"></div>
+<div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-30"></div>
 
-<!-- Sidebar -->
-<div id="sidebar" class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300">
-  <button onclick="closeSidebar()" class="p-4 text-right w-full">✕</button>
-  <nav class="p-4">
-    <a href="#" class="block mb-2">Home</a>
-    <a href="#" class="block mb-2">Service</a>
-    <a href="#" class="block mb-2">Contact</a>
-  </nav>
-</div>
+<!-- Side Menu End -->
 
+<!--Toggle Script-->
+<script src="toggle.js"></script>
 <script>
   function openSidebar() {
-    document.getElementById('sidebar').classList.remove('translate-x-full');
+    document.getElementById('sideMenu').classList.remove('hidden');
     document.getElementById('overlay').classList.remove('hidden');
+    document.body.classList.add('overflow-hidden');
   }
 
   function closeSidebar() {
-    document.getElementById('sidebar').classList.add('translate-x-full');
+    document.getElementById('sideMenu').classList.add('hidden');
     document.getElementById('overlay').classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
   }
+
+  // Klik overlay untuk menutup
+  document.getElementById('overlay').addEventListener('click', closeSidebar);
 </script>
 
 </body>

@@ -12,55 +12,64 @@
 
 <body>
 <!--Navbar Begin-->
-  <nav>
-    <div class="h-12 flex items-center px-0.5">
-      <a href="index.html" id="topBarLogo">
-        <img src="IMG/Logo/SENADA Resize.png" alt="Logo" class="h-24 py-1 object-contain">
-      </a>
-    </div>
-  
-    <div class="menu-container">
-      <div class="dropdown">
-        <button class="dropdown-toggle" onclick="toggleDropdown('photoDropdown', this)">
-          Photography <span class="arrow">▼</span>
-        </button>
-        <div id="photoDropdown" class="dropdown-content">
-          <a href="#">Pre Wedding</a>
-          <a href="#">Wedding</a>
-          <!-- <a href="#">Product</a>
-          <a href="#">Food</a> -->
-        </div>
-      </div>
-  
-      <div class="dropdown">
-        <button class="dropdown-toggle" onclick="toggleDropdown('videoDropdown', this)">
-          Videography <span class="arrow">▼</span>
-        </button>
-        <div id="videoDropdown" class="dropdown-content">
-          <a href="#">Wedding</a>
-          <!-- <a href="#">Commercial</a>
-          <a href="#">Event</a> -->
-        </div>
-      </div>
-    </div>
-      <div id="hamburgerButton" class="hamburger" onclick="toggleMenu()">☰</div>
-    </div>
-  </nav>
-<!-- Navbar End -->
+<nav id="navbar" class="fixed flex w-full z-50 shadow-md bg-white justify-between transitiion-all duration-300">
+  <div class="h-12 flex items-center px-1">
+    <a href="index.html" id="topBarLogo">
+      <img src="IMG/Logo/SENADA Resize.png" alt="Logo" class="h-24 py-1 object-contain">
+    </a>
+  </div>
 
-<!-- Side Menu Begin -->
+<div class="menu-container" id="topNav">
+  <div class="dropdown relative hidden md:block">
+    <button class="dropdown-toggle flex items-center gap-1" onclick="toggleDropdown('photoDropdown', this)">
+      Photography
+      <span class="arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 transform transition-transform duration-300 origin-center">
+          <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/>
+        </svg>
+      </span>
+    </button>
+  
+    <div id="photoDropdown" class="dropdown-content hidden absolute mt-2 bg-white shadow-lg rounded-sm">
+      <a href="Pre-Wedding.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Pre Wedding</a>
+      <a href="Wedding.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Wedding</a>
+    </div>
+  </div>
+
+  <div class="dropdown relative hidden md:block">
+    <button class="dropdown-toggle flex items-center gap-1" onclick="toggleDropdown('videoDropdown', this)">
+      Videography
+      <span class="arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 transform transition-transform duration-300 origin-center">
+          <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/>
+        </svg>
+      </span>
+    </button>
+    <div id="videoDropdown" class="dropdown-content hidden absolute left-0 mt-2 bg-white shadow-lg rounded-sm">
+      <a href="Vid-Wedding.html">Wedding</a>
+    </div>
+  </div>
+
+  <div id="hamburgerButton" class="hamburger md:block px-1" onclick="openSidebar()">☰</div>
+</div>
+</nav>
+<!--Navbar End-->
+
+<!--Side Menu Begin-->
 <div class="side-menu" id="sideMenu">
   <div class="top">
-    <div class="nav-logo" id="sideBarLogo">
-        <a href="index.html">
-          <img src="IMG/Logo/SENADA Resize.png" alt="Senada Logo">
-        </a>
+    <div>
+      <button class="btn-close font-bold cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>        
+      </button>
     </div>
       <a href="Photography.html">Photography</a>
       <a href="Videography.html">Videography</a>
       <a href="About.html">About</a>
       <a href="Service.html">Service</a>
-      <a href="Contact.html">Contact</a>
+      <a href="FAQ.html">FAQ</a>
   </div>
   <div class="bottom">
     <div class="contact-item">
@@ -70,16 +79,18 @@
       <a href="https://www.instagram.com/senadapictures?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="icon"><i class="fa-brands fa-instagram"></i><span>@senadapictures</span></a>
     </div>
     <div class="contact-item">
-      <a href="https://maps.app.goo.gl/pJCjfqzjXT8QCr5k9" target="_blank" class="icon"><i class="fa-solid fa-location-dot"></i><span>Jl. Apa Aja Lah No.24</span></a>
+      <a href="https://maps.app.goo.gl/pJCjfqzjXT8QCr5k9" target="_blank" class="icon"><i class="fa-solid fa-location-dot"></i><span>Jl. Uluwatu II No.54, Jimbaran</span></a>
     </div>
     <div class="contact-item">
-      <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="icon"><i class="fa-regular fa-envelope"></i><span>wongirengjembuten365@gmail.com</span></a>
+      <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="icon"><i class="fa-regular fa-envelope"></i><span>senadapictures@gmail.com</span></a>
     </div>
-    <div class="powered">Bali 80361, Indonesia</div>
-    <div class="powered-photo">&copy; Powered by | Photos by | Terms of Service | Privacy Policy</div>
+    <div class="powered font-poppins">Bali 80361 - Indonesia</div>
+    <div class="powered-photo font-poppins">&copy; Powered by | Photos by | Terms of Service | Privacy Policy</div>
   </div>
 </div>
-<!-- Side Menu End -->
+
+<div id="overlay" class="overlay fixed inset-0 bg-black/45 hidden z-101"></div>
+<!--Side Menu End-->
 
 <!--Main Begin-->
 <div class="relative w-full min-h-screen pt-17">
@@ -108,11 +119,9 @@
 <!--Card-->
 <div class="grid grid-cols-1 lg:grid-cols-2">
   <!--Left Picture-->
-  <a href="#">
-    <div class="w-full h-full">
-      <img src="IMG/People/Mim 2.jpg" alt="Foto Atas" class="height-guide-0 w-full h-full object-cover"/>
-    </div>
-  </a>
+  <div class="w-full h-full">
+    <img src="IMG/People/Mim 2.jpg" alt="Foto Atas" class="height-guide-0 w-full h-full object-cover"/>
+  </div>
 
   <!--Right Text-->
   <div class="relative bg-white p-8 md:p-12 text-sm leading-relaxed flex flex-col justify-center">
@@ -120,10 +129,10 @@
     <div class="hidden lg:block absolute left-0 top-1/4 w-4 h-4 bg-white rotate-45 -translate-x-1/2 -translate-y-1/2 z-10"></div>
 
     <h2 class="text-sm uppercase tracking-widest font-medium mb-4">
-      <i class="fa-solid fa-camera"></i>
-      <a href="#" class="mx-4 inline-block">Loehoet Pandjaitan</a>
+      <i class="fa-solid fa-camera pr-2"></i>
+      <p class="text-gray-500 hover:text-black mx-6 inline-block duration-300">Loehoet Pandjaitan</p>
       |
-      <a href="#" class="mx-4 inline-block">LORD</a>
+      <p class="text-gray-500 hover:text-black mx-6 inline-block duration-300">Lord</p>
     </h2>
     <p class="mb-8">
       Don’t be fooled by the cool and collected look on his face, because beneath all that exterior, lies a deeply passionate guy who is just bursting with ideas. Robb has the eye of an eagle. He is able to capture the right moments in every events that he shoots for and he possesses the magic hands to put together different shots into a meaningful story. In addition to all that talent, Robb is a great guy. He is a really friendly dude and a superb friend. We believe that you will fall in love with him as easily as we had.
@@ -145,10 +154,10 @@
     <div class="hidden lg:block absolute right-0 top-1/6 w-4 h-4 bg-white rotate-45 translate-x-1/2 -translate-y-1/2 z-10"></div>
 
     <h2 class="text-sm uppercase tracking-widest font-medium mb-4">
-      <i class="fa-solid fa-video"></i>
-      <a href="#" class="mx-4 inline-block">G. Rakagooning</a>
+      <i class="fa-solid fa-video pr-2"></i>
+      <p class="text-gray-500 hover:text-black mx-6 inline-block duration-300">Gibran Rakagooning</p>
       |
-      <a href="#" class="mx-4 inline-block">Gooners</a>
+      <p class="text-gray-500 hover:text-black mx-6 inline-block duration-300">Gooners</p>
     </h2>
     <p class="mb-4">
       "Techniques can always be learned but the soul of a photo undeniably belongs to the photographer." This is the quote that Gibran always carries in his mind every time he clicks on his camera. The result is a strong connection between moments, emotions and memories in his photographs.
@@ -177,10 +186,10 @@
     <div class="hidden lg:block absolute left-0 top-1/4 w-4 h-4 bg-white rotate-45 -translate-x-1/2 -translate-y-1/2 z-10"></div>
 
     <h2 class="text-sm uppercase tracking-widest font-medium mb-4">
-      <i class="fa-solid fa-camera"></i>
-      <a href="#" class="mx-4 inline-block">Loehoet Pandjaitan</a>
+      <i class="fa-solid fa-camera pr-2"></i>
+      <p class="text-gray-500 hover:text-black mx-6 inline-block duration-300">Loehoet Pandjaitan</p>
       |
-      <a href="#" class="mx-4 inline-block">LORD</a>
+      <p class="text-gray-500 hover:text-black mx-6 inline-block duration-300">Lord</p>
     </h2>
     <p class="mb-8">
       Don’t be fooled by the cool and collected look on his face, because beneath all that exterior, lies a deeply passionate guy who is just bursting with ideas. Robb has the eye of an eagle. He is able to capture the right moments in every events that he shoots for and he possesses the magic hands to put together different shots into a meaningful story. In addition to all that talent, Robb is a great guy. He is a really friendly dude and a superb friend. We believe that you will fall in love with him as easily as we had.
@@ -192,16 +201,16 @@
 <!--Footer Begin-->
 <footer class="bg-white border-t border-dashed border-gray-400 mt-10">
   <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-start gap-8">
-    
+
     <div>
-      <a href="#">
+      <a href="index.html">
         <img src="IMG/Logo/NEW SENADA PICTURES LOGO.png" alt="Senada Pictures" class="h-20 mb-2">
       </a>
     </div>
-    
+
     <div class="text-sm/5 text-gray-600">
       <p class="text-xs mb-1">by appointment only</p>
-      <p class="text-xs mb-1"><a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="text-gray-800">wongirengjembuten365@gmail.com</a></p>
+      <p class="text-xs mb-1"><a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="text-gray-800">senadapictures@gmail.com</a></p>
       <p class="text-xs mb-1">Jl. Uluwatu II No.54, Jimbaran, Kec. Kuta Sel., Kabupaten Badung</p>
       <p class="text-xs mb-1">Bali 80361, Indonesia</p>
     </div>
@@ -209,8 +218,8 @@
     <div class="flex space-x-4 text-gray-500 text-2xl">
       <a href="https://wa.me/+6285339047862" target="_blank" class="hover:text-black"><i class="fa-brands fa-whatsapp"></i></a>
       <a href="https://www.instagram.com/senadapictures?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-black"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#" class="hover:text-black "><i class="fa-brands fa-facebook"></i></a>
-      <a href="#" class="hover:text-black"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://www.facebook.com/" target="_blank" class="hover:text-black "><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.youtube.com/" target="_blank" class="hover:text-black"><i class="fa-brands fa-youtube"></i></a>
     </div>
   </div>
 

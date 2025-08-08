@@ -1,31 +1,33 @@
 // Navbar Atas (Arrow)
 function toggleDropdown(id, button) {
-const dropdown = document.getElementById(id);
-const allDropdowns = document.querySelectorAll('.dropdown-content');
-const allArrows = document.querySelectorAll('.arrow');
+  const dropdown = document.getElementById(id);
+  const arrow = button.querySelector('.arrow svg');
 
-  allDropdowns.forEach(d => {
-    if (d !== dropdown) d.style.display = 'none';
+  document.querySelectorAll('.dropdown-content').forEach(d => {
+    if (d !== dropdown) d.classList.add('hidden');
   });
 
-  allArrows.forEach(a => {
-    if (a !== button.querySelector('.arrow')) a.textContent = '▼';
+  document.querySelectorAll('.arrow svg').forEach(svg => {
+    if (svg !== arrow) svg.classList.remove('rotate-180');
   });
 
-  if (dropdown.style.display === 'block') {
-    dropdown.style.display = 'none';
-    button.querySelector('.arrow').textContent = '▼';
-  } else {
-    dropdown.style.display = 'block';
-    button.querySelector('.arrow').textContent = '▲';
-  }
+  const isHidden = dropdown.classList.contains('hidden');
+  dropdown.classList.toggle('hidden', !isHidden);
+  arrow.classList.toggle('rotate-180', isHidden);
 }
 
-// Close Dropdwown
 document.addEventListener('click', function (e) {
   if (!e.target.closest('.dropdown')) {
-    document.querySelectorAll('.dropdown-content').forEach(d => d.style.display = 'none');
-    document.querySelectorAll('.arrow').forEach(a => a.textContent = '▼');
+    document.querySelectorAll('.dropdown-content').forEach(d => d.classList.add('hidden'));
+    document.querySelectorAll('.arrow svg').forEach(svg => svg.classList.remove('rotate-180'));
+  }
+});
+
+// Tutup dropdown saat klik di luar
+document.addEventListener('click', function (e) {
+  if (!e.target.closest('.dropdown')) {
+    document.querySelectorAll('.dropdown-content').forEach(d => d.classList.add('hidden'));
+    document.querySelectorAll('.arrow svg').forEach(a => a.classList.remove('rotate-180'));
   }
 });
 
@@ -33,11 +35,30 @@ document.addEventListener('click', function (e) {
 document.addEventListener('DOMContentLoaded', function () {
   const hamburgerButton = document.getElementById('hamburgerButton');
   const sideMenu = document.getElementById('sideMenu');
-  const sideBarLogo = document.getElementById('sideBarLogo');
   const topBarLogo = document.getElementById('topBarLogo');
+  const sideBarLogo = document.getElementById('sideBarLogo');
+  const topNav = document.getElementById('navbar');
+  const overlay = document.getElementById('overlay');
+
+  function closeSideMenu() {
+    sideMenu.classList.remove('open');
+    overlay?.classList.add('hidden');
+  }
 
   function toggleMenu() {
-    sideMenu.classList.toggle('open');
+    const isOpen = sideMenu.classList.toggle('open');
+    if (overlay) {
+      overlay.classList.toggle('hidden', !isOpen);
+    }
+    if (isOpen) {
+      closeAllDropdowns();
+    }
+  }
+
+  function closeAllDropdowns() {
+    document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+      dropdown.classList.add('hidden');
+    });
   }
 
   hamburgerButton.addEventListener('click', function (e) {
@@ -45,15 +66,14 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleMenu();
   });
 
-  function handleLogoClick(e) {
-    if (sideMenu && sideMenu.classList.contains('open')) {
-      sideMenu.classList.remove('open');
-    }
-  }
+  topBarLogo?.addEventListener('click', closeSideMenu);
+  sideBarLogo?.addEventListener('click', closeSideMenu);
 
-  topBarLogo?.addEventListener('click', handleLogoClick);
-  sideBarLogo?.addEventListener('click', handleLogoClick);
+  topNav?.addEventListener('click', closeSideMenu);
+
+  overlay?.addEventListener('click', closeSideMenu);
 });
+
 
 // Close Right-Bar
 document.addEventListener('click', function(e) {
@@ -67,28 +87,70 @@ toggle.addEventListener('click',() => {
     document.documentElement.classList.contains('dark')? toggle.innerText = "☰" : toggle.innerText = "☰"
 })
 
-// Navbar Scroll
-let lastScrollY = window.scrollY;
-const navbar = document.getElementById('navbar');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > lastScrollY) {
-    // Scroll ke bawah → sembunyikan navbar
-    navbar.style.transform = 'translateY(-100%)';
-  } else {
-
-    navbar.style.transform = 'translateY(0)';
-  }
-  lastScrollY = window.scrollY;
-});
-
-// Contact Features
+// FAQ Features
 document.querySelectorAll('.faq-btn').forEach(btn => 
   { 
     btn.addEventListener('click', () => { 
       const content = btn.nextElementSibling; const icon = btn.querySelector('svg'); content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px'; icon.classList.toggle('rotate-180'); 
     }); 
   }); 
+
+// Overlay
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", function () {
+  const dropdowns = document.querySelectorAll(".dropdown-content");
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    // Scroll ke bawah → sembunyikan semua dropdown
+    dropdowns.forEach(dropdown => {
+      if (!dropdown.classList.contains("hidden")) {
+        dropdown.classList.add("hidden");
+
+        // Balikkan ikon panah
+        const arrow = dropdown.parentElement.querySelector('.dropdown-toggle .arrow svg');
+        arrow?.classList.remove("rotate-180");
+      }
+    });
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
+
+function openSidebar() {
+document.getElementById("sideMenu").classList.remove("hidden");
+document.getElementById("overlay").classList.remove("hidden");
+document.body.classList.add("overflow-hidden");
+}
+
+function closeSidebar() {
+document.getElementById("sideMenu").classList.add("hidden");
+document.getElementById("overlay").classList.add("hidden");
+document.body.classList.remove("overflow-hidden");
+}
+
+document.getElementById('overlay').addEventListener('click', closeSidebar);
+
+document.querySelector('.btn-close').addEventListener('click', closeSidebar);
+
+function closeSidebar() {
+document.getElementById('sideMenu').classList.remove('open');
+document.getElementById('overlay').classList.add('hidden');
+}
+
+// Navbar Scroll
+let lastScrollY = window.scrollY;
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > lastScrollY) {
+    navbar.style.transform = 'translateY(-100%)';
+  } else {
+    navbar.style.transform = 'translateY(0)';
+  }
+  lastScrollY = window.scrollY;
+});
 
 // Main Content Animation
 const reveals = document.querySelectorAll('.reveal');
