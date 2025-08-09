@@ -32,6 +32,16 @@ document.addEventListener('click', function (e) {
 });
 
 // Side-Bar & MB
+function openMenu() {
+  document.querySelector('.side-menu').style.right = '0';
+  document.body.classList.add('no-scroll');
+}
+
+function closeMenu() {
+  document.querySelector('.side-menu').style.right = '-300px';
+  document.body.classList.remove('no-scroll');
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   const hamburgerButton = document.getElementById('hamburgerButton');
   const sideMenu = document.getElementById('sideMenu');
@@ -141,7 +151,7 @@ document.getElementById('overlay').classList.add('hidden');
 // Hero Section Effect
 const images = [
   "IMG/Background 4.jpg",
-  "IMG/Background 9.jpg",
+  "IMG/Background 3.jpg",
   "IMG/Background 7.jpg",
   "IMG/Background 6.jpg"
 ];

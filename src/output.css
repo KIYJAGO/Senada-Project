@@ -241,6 +241,12 @@
   .top-5 {
     top: calc(var(--spacing) * 5);
   }
+  .top-15 {
+    top: calc(var(--spacing) * 15);
+  }
+  .top-30 {
+    top: calc(var(--spacing) * 30);
+  }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
@@ -397,6 +403,9 @@
   }
   .h-24 {
     height: calc(var(--spacing) * 24);
+  }
+  .h-\[50dvh\] {
+    height: 50dvh;
   }
   .h-\[100dvh\] {
     height: 100dvh;
