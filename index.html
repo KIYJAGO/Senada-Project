@@ -13,7 +13,7 @@
 <body>
 <!--Navbar Begin-->
 <nav id="navbar" class="fixed flex w-full z-50 shadow-md bg-white justify-between transitiion-all duration-300">
-  <div class="h-12 flex items-center px-1">
+  <div class="h-12 flex items-center md:px-1">
     <a href="index.html" id="topBarLogo">
       <img src="IMG/Logo/SENADA Resize.png" alt="Logo" class="h-24 py-1 object-contain">
     </a>
@@ -93,7 +93,12 @@
 <!--Side Menu End-->
 
 <!--Hero Section-->
-<div class="relative w-full h-full bg-cover bg-center" style="background-image: url('IMG/Background 4.jpg');"></div>
+<section class="relative w-full h-screen overflow-hidden">
+  <img id="img1" src="IMG/Background 4.jpg" 
+       class="absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 opacity-100">
+  <img id="img2" src="IMG/Background 9.jpg" 
+       class="absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 opacity-0">
+</section>
 <!--Hero Section-->
 
 <!--Main Content Begin-->
@@ -207,8 +212,8 @@
 
 <!--Content 2-->
 <div id="secondContent">
-  <div class="bg-center relative max-w-8xl h-[130vh] md:h-[210vh] lg:h-[200vh] z-10 w-auto overflow-hidden">
-    <div class="sticky top-0 md:top-30 lg:top-10 h-screen w-full">
+  <div class="bg-center relative max-w-8xl h-[100dvh] md:h-[210vh] lg:h-[200vh] z-10 w-auto overflow-hidden">
+    <div class="sticky top-5 md:top-20 lg:top-10 h-screen w-full">
       <div id="parallax" class="w-full h-full bg-cover bg-center will-change-transform bg-black/70">
           <a href="#">
             <img src="IMG/Background 5.jpg" alt="Senada" class="lg:w-full">
@@ -353,7 +358,7 @@
       </a>
     </div>
 
-    <div class="hidden lg:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+    <div class="hidden lg:block md:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
       <a href="Content.html">
         <img src="IMG/Background 7.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
         <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
@@ -381,7 +386,7 @@
         </div>
     </div>
 
-    <div class="hidden lg:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+    <div class="hidden lg:block md:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
       <a href="Content.html">
         <img src="IMG/Background 9.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
         <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">

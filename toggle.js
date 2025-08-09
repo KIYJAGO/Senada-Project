@@ -74,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
   overlay?.addEventListener('click', closeSideMenu);
 });
 
-
 // Close Right-Bar
 document.addEventListener('click', function(e) {
   if (sideMenu.classList.contains('open') && !sideMenu.contains(e.target) && e.target !== hamburgerButton) {
@@ -138,6 +137,38 @@ function closeSidebar() {
 document.getElementById('sideMenu').classList.remove('open');
 document.getElementById('overlay').classList.add('hidden');
 }
+
+// Hero Section Effect
+const images = [
+  "IMG/Background 4.jpg",
+  "IMG/Background 9.jpg",
+  "IMG/Background 7.jpg",
+  "IMG/Background 6.jpg"
+];
+
+let current = 0;
+let next = 1;
+
+const img1 = document.getElementById("img1");
+const img2 = document.getElementById("img2");
+
+setInterval(() => {
+  // Active - Next
+  const activeImg = current % 2 === 0 ? img1 : img2;
+  const nextImg = current % 2 === 0 ? img2 : img1;
+
+  nextImg.src = images[next];
+
+  // Fade effect
+  activeImg.classList.remove("opacity-100");
+  activeImg.classList.add("opacity-0");
+
+  nextImg.classList.remove("opacity-0");
+  nextImg.classList.add("opacity-100");
+
+  current = next;
+  next = (next + 1) % images.length;
+}, 5000);
 
 // Navbar Scroll
 let lastScrollY = window.scrollY;
