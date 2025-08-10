@@ -150,8 +150,8 @@ document.getElementById('overlay').classList.add('hidden');
 
 // Hero Section Effect
 const images = [
-  "IMG/Background 4.jpg",
   "IMG/Background 3.jpg",
+  "IMG/Background 4.jpg",
   "IMG/Background 7.jpg",
   "IMG/Background 6.jpg"
 ];

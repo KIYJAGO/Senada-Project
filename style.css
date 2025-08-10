@@ -108,18 +108,12 @@ nav {
   color: #050505;
 }
 
-.nav-logo img {
-  width: 150px; 
-  height: auto;  
-  display: block;
-}
-
 .side-menu {
   position: fixed;
   top: 0;
   right: -300px;
   width: 300px;
-  height: 100dvh;
+  height: 100%;
   background: #ffffff;
   display: flex;
   flex-direction: column;
@@ -138,6 +132,12 @@ nav {
   background: rgba(0,0,0,0.5);
   transition: opacity 0.3s ease;
   z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    height: 100dvh;
+  }
 }
 
 .side-menu.open {
@@ -159,6 +159,14 @@ nav {
   gap: 10px;
 }
 
+@media (max-width: 768px) {
+  /* Bagian atas sidebar */
+  .side-menu .top {
+    gap: 1px !important;
+    padding-top: px;
+  }
+}
+
 .side-menu a {
   text-decoration: none;
   color: #050505;
@@ -167,8 +175,14 @@ nav {
   width: fit-content;
 }
 
+@media (max-width: 768px) {
+  .side-menu a {
+    font-size: 15px !important;
+  }
+}
+
 .side-menu .bottom {
-  font-size: 13px;
+  font-size: 14px;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -182,12 +196,24 @@ nav {
   margin-bottom: 8px;
 }
 
+@media (max-width: 768px) {
+  .contact-item {
+    margin-bottom: 0px;
+  }
+}
+
 .contact-item a {
   display: flex;
   align-items: center;
   text-decoration: none; 
   color: inherit; 
 }
+
+/* @media (max-width: 768px) {
+  .contact-item a {
+    margin-bottom: 40px;
+  }
+} */
 
 .contact-item i {
   width: 20px;
@@ -200,14 +226,23 @@ nav {
 
 .contact-item span {
   text-align: center;
-  font-size: 9px; 
+  font-size: 13px; 
   font-weight: 400;
-  cursor: pointer;
 }
 
 .contact-item:hover span {
   color: #b5b5b5;
   transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .contact-item i {
+    font-size: 18px;
+  }
+
+  .contact-item span {
+    font-size: 9px !important
+  }
 }
 
 .powered {
@@ -216,9 +251,10 @@ nav {
   text-align: center;
 }
 
-.powered-photo {
-  text-align: center;
-  font-size: 11px;
+@media (max-width: 768px) {
+  .powered {
+    font-size: 10px;
+  }
 }
 
 .btn-close {
@@ -230,6 +266,24 @@ nav {
   border-radius: 4px;
 }
 
+@media (max-width: 768px) {
+  .btn-close { 
+    padding: 5px 8px !important;
+    font-size: 2px !important;
+  }
+}
+
 .btn-close:hover{
   color: gray;
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    height: 100dvh;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+    height: 100%;
+  }
 }
