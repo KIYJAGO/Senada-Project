@@ -56,7 +56,7 @@
 <!--Navbar End-->
 
 <!--Side Menu Begin-->
-<div class="side-menu" id="sideMenu">
+<div class="side-menu fixed" id="sideMenu">
   <div class="top">
     <div>
       <button class="btn-close font-bold cursor-pointer mb-2 md:mb-2">
@@ -65,11 +65,26 @@
         </svg>        
       </button>
     </div>
-      <a href="Photography.html">Photography</a>
-      <a href="Videography.html">Videography</a>
-      <a href="About.html">About</a>
-      <a href="Service.html">Service</a>
-      <a href="FAQ.html">FAQ</a>
+    <a href="Photography.html" class="relative group">
+      <span class="pb-1">Photography</span>
+      <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
+    </a>    
+    <a href="Videography.html" class="relative group">
+      <span class="pb-1">Videography</span>
+      <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
+    </a>
+      <a href="About.html" class="relative group">
+        <span class="pb-1">About</span>
+        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
+      </a>
+      <a href="Service.html" class="relative group">
+        <span>Service</span>
+        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
+      </a>
+      <a href="FAQ.html" class="relative group">
+        <span>FAQ</span>
+        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
+      </a>
   </div>
   <div class="bottom">
     <div class="contact-item">
@@ -99,16 +114,16 @@
   <img src="IMG/Background 1.jpg" alt="Who we are" class="w-full h-full object-cover absolute inset-0 z-0" />
 
   <!-- Overlay -->
-  <div class="relative z-10 flex justify-center min-h-screen px-12 py-12 bg-black/50 backdrop-blur-none">
+  <div class="relative z-10 flex justify-center min-h-screen px-12 py-12 md:pt-25 bg-black/50 backdrop-blur-none">
     <div class="max-w-3xl text-white text-justify font-light space-y-6">
       <h1 class="text-4xl md:text-6xl font-normal">Who we are</h1>
-      <p>
+      <p class="text-sm md:text-base">
         Our journey started in 2019, exactly before the world had been flipped upside down. We are a small but passionate team focused on capturing the most meaningful moments of your life. From portraits speaking about personalities to wedding photos telling about the beginning of their new life, families bound with love in photo shoots, and couples whose every picture tells a story. Our motto, <strong class="font-extrabold">"We do everything with love"</strong> is not just a phrase, but it’s the core of heart behind everything. We are committed to this in every session, every interaction, and every created image.
       </p>
-      <p>
-        We’re a small business and have grown primarily through referrals. Our clients have been our biggest advocates, referring the word along and allowing us to continue with this labor of love. Also, by choosing us or recommending us to others, you help us capture more of the beautiful moments that happen in life.
+      <p class="text-sm md:text-base">
+        We're a small business and have grown primarily through referrals. Our clients have been our biggest advocates, referring the word along and allowing us to continue with this labor of love. Also, by choosing us or recommending us to others, you help us capture more of the beautiful moments that happen in life.
       </p>
-      <p>
+      <p class="text-sm md:text-base">
         In our portfolio, you will see photos in different tone colors; this testifies to our commitment to making each session personal and unique. We offer you the freedom to choose the tone that best matches your vision, whether it’s warm and nostalgic or modern and fresh. That is all part of the mission: to make every photo session truly feel like a reflection of who you are.
       </p>
     </div>
@@ -156,7 +171,7 @@
 
     <h2 class="text-sm uppercase tracking-widest font-medium mb-4">
       <i class="fa-solid fa-video pr-2"></i>
-      <p class="text-gray-500 hover:text-black mx-6 inline-block duration-300">Gibran Rakagooning</p>
+      <p class="text-gray-500 hover:text-black mx-2 inline-block duration-300">Gibran Rakagooning</p>
       |
       <p class="text-gray-500 hover:text-black mx-6 inline-block duration-300">Gooners</p>
     </h2>

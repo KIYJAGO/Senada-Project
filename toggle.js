@@ -104,7 +104,7 @@ document.querySelectorAll('.faq-btn').forEach(btn =>
     }); 
   }); 
 
-// Overlay
+// Overlay & Navbar Arrow
 let lastScrollTop = 0;
 
 window.addEventListener("scroll", function () {

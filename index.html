@@ -56,7 +56,7 @@
 <!--Navbar End-->
 
 <!--Side Menu Begin-->
-<div class="side-menu" id="sideMenu">
+<div class="side-menu fixed" id="sideMenu">
   <div class="top">
     <div>
       <button class="btn-close font-bold cursor-pointer mb-2 md:mb-2">
@@ -65,11 +65,26 @@
         </svg>        
       </button>
     </div>
-      <a href="Photography.html">Photography</a>
-      <a href="Videography.html">Videography</a>
-      <a href="About.html">About</a>
-      <a href="Service.html">Service</a>
-      <a href="FAQ.html">FAQ</a>
+    <a href="Photography.html" class="relative group">
+      <span class="pb-1">Photography</span>
+      <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
+    </a>    
+    <a href="Videography.html" class="relative group">
+      <span class="pb-1">Videography</span>
+      <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
+    </a>
+      <a href="About.html" class="relative group">
+        <span class="pb-1">About</span>
+        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
+      </a>
+      <a href="Service.html" class="relative group">
+        <span>Service</span>
+        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
+      </a>
+      <a href="FAQ.html" class="relative group">
+        <span>FAQ</span>
+        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
+      </a>
   </div>
   <div class="bottom">
     <div class="contact-item">
@@ -90,7 +105,7 @@
   </div>
 </div>
 
-<div id="overlay" class="overlay fixed inset-0 bg-black/45 hidden z-101"></div>
+<div id="overlay" class="overlay fixed h-screen w-screen inset-0 bg-black/45 hidden z-101"></div>
 <!--Side Menu End-->
 
 <!--Hero Section-->
@@ -212,7 +227,7 @@
 <!--Content 2-->
 <div id="secondContent">
   <div class="bg-center relative max-w-8xl h-[100dvh] md:h-[210vh] lg:h-[200vh] z-10 w-auto overflow-hidden">
-    <div class="sticky top-10 md:top-20 lg:top-5 h-screen w-full">
+    <div class="sticky top-20 md:top-20 lg:top-5 h-screen w-full">
       <div id="parallax" class="w-full h-full bg-cover bg-center will-change-transform bg-black/70">
           <a href="#">
             <img src="IMG/Background 5.jpg" alt="Senada">
@@ -267,154 +282,154 @@
 <!--Content 3-->
 <div id="thirdContent">
   <div class="flex px-5 md:px-12 lg:px-38">
-    <h2 class="text-[20px] md:text-[18px] border-b-1 border-black transition-all duration-200 hover:border-b-4 active:border-b-4 active:text-black inline-block">
+    <h2 class="text-[15px] md:text-[18px] border-b-1 border-black transition-all duration-200 hover:border-b-4 active:border-b-4 active:text-black inline-block">
       Recent Posts
     </h2>    
   </div>
   
-<section class="max-w-6xl mx-auto px-14 md:px-12 mt-8 mb-12">
+  <section class="max-w-6xl mx-auto px-14 md:px-12 mt-8 mb-12">
 
-  <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 md:gap-12 rounded-s-lg">
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 md:gap-12 rounded-s-lg">
 
-    <!--Cards-->
-    <div>
-      <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
-      <img src="IMG/Background 1.jpg" alt="Bride" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
-          <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
-              <a href="wedding2.html" class="absolute inset-0 flex items-center justify-center">
-              <!--Button-->
-              <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-100">
-                  <svg class="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
+      <!--Cards-->
+      <div>
+        <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <img src="IMG/Background 1.jpg" alt="Bride" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+            <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
+                <a href="wedding2.html" class="absolute inset-0 flex items-center justify-center">
+                <!--Button-->
+                <div class="w-10 h-10 md:w-16 md:h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-100">
+                    <svg class="w-6 h-6 md:w-6 md:h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M6 4l10 6-10 6V4z"/>
+                    </svg>
+                </div>
+                </a>
+            </div>
+          </div>
+      </div>
+
+      <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <a href="Content.html">
+          <img src="IMG/Background 2.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+          <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+            <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-32">
+              <p>KIYJAGO</p>
+              <p>Walk of Love</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <a href="Content.html">
+          <img src="IMG/Background 3.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+          <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+            <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-32">
+              <p>KIYJAGO</p>
+              <p>Walk of Love</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div>
+        <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <img src="IMG/Background 4.jpg" alt="Bride" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+            <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
+                <a href="wedding2.html" class="absolute inset-0 flex items-center justify-center">
+                <!--Button-->
+                <div class="w-10 h-10 md:w-16 md:h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-100">
+                  <svg class="w-6 h-6 md:w-6 md:h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M6 4l10 6-10 6V4z"/>
                   </svg>
               </div>
-              </a>
+                </a>
+            </div>
           </div>
-        </div>
-    </div>
+      </div>
 
-    <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
-      <a href="Content.html">
-        <img src="IMG/Background 2.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
-        <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
-          <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-32">
-            <p>KIYJAGO</p>
-            <p>Walk of Love</p>
+      <div class="hidden lg:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <a href="Content.html">
+          <img src="IMG/Background 5.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+          <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+            <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-32">
+              <p>KIYJAGO</p>
+              <p>Walk of Love</p>
+            </div>
           </div>
-        </div>
-      </a>
-    </div>
+        </a>
+      </div>
 
-    <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
-      <a href="Content.html">
-        <img src="IMG/Background 3.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
-        <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
-          <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-32">
-            <p>KIYJAGO</p>
-            <p>Walk of Love</p>
+      <div class="hidden lg:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <a href="Content.html">
+          <img src="IMG/Background 6.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+          <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+            <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-32">
+              <p>KIYJAGO</p>
+              <p>Walk of Love</p>
+            </div>
           </div>
-        </div>
-      </a>
-    </div>
+        </a>
+      </div>
 
-    <div>
-      <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
-      <img src="IMG/Background 4.jpg" alt="Bride" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
-          <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
-              <a href="wedding2.html" class="absolute inset-0 flex items-center justify-center">
-              <!--Button-->
-              <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-100">
-                  <svg class="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M6 4l10 6-10 6V4z"/>
+      <div class="hidden lg:block md:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <a href="Content.html">
+          <img src="IMG/Background 7.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+          <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+            <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-32">
+              <p>KIYJAGO</p>
+              <p>Walk of Love</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div>
+        <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <img src="IMG/Background 8.jpg" alt="Bride" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+            <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
+                <a href="wedding2.html" class="absolute inset-0 flex items-center justify-center">
+                <!--Button-->
+                <div class="w-10 h-10 md:w-16 md:h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-100">
+                  <svg class="w-6 h-6 md:w-6 md:h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M6 4l10 6-10 6V4z"/>
                   </svg>
               </div>
-              </a>
+                </a>
+            </div>
           </div>
-        </div>
-    </div>
+      </div>
 
-    <div class="hidden lg:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
-      <a href="Content.html">
-        <img src="IMG/Background 5.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
-        <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
-          <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-32">
-            <p>KIYJAGO</p>
-            <p>Walk of Love</p>
+      <div class="hidden lg:block md:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <a href="Content.html">
+          <img src="IMG/Background 9.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+          <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+            <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-32">
+              <p>KIYJAGO</p>
+              <p>Walk of Love</p>
+            </div>
           </div>
-        </div>
-      </a>
-    </div>
+        </a>
+      </div>
 
-    <div class="hidden lg:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
-      <a href="Content.html">
-        <img src="IMG/Background 6.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
-        <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
-          <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-32">
-            <p>KIYJAGO</p>
-            <p>Walk of Love</p>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <div class="hidden lg:block md:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
-      <a href="Content.html">
-        <img src="IMG/Background 7.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
-        <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
-          <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-32">
-            <p>KIYJAGO</p>
-            <p>Walk of Love</p>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <div>
-      <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
-      <img src="IMG/Background 8.jpg" alt="Bride" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
-          <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
-              <a href="wedding2.html" class="absolute inset-0 flex items-center justify-center">
-              <!--Button-->
-              <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-100">
-                  <svg class="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M6 4l10 6-10 6V4z"/>
+      <div>
+        <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+        <img src="IMG/Background 10.jpg" alt="Bride" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+            <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
+                <a href="wedding2.html" class="absolute inset-0 flex items-center justify-center">
+                <!--Button-->
+                <div class="w-10 h-10 md:w-16 md:h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-100">
+                  <svg class="w-6 h-6 md:w-6 md:h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M6 4l10 6-10 6V4z"/>
                   </svg>
               </div>
-              </a>
+                </a>
+            </div>
           </div>
-        </div>
-    </div>
+      </div>
 
-    <div class="hidden lg:block md:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
-      <a href="Content.html">
-        <img src="IMG/Background 9.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
-        <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
-          <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-32">
-            <p>KIYJAGO</p>
-            <p>Walk of Love</p>
-          </div>
-        </div>
-      </a>
     </div>
-
-    <div>
-      <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
-      <img src="IMG/Background 10.jpg" alt="Bride" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
-          <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
-              <a href="wedding2.html" class="absolute inset-0 flex items-center justify-center">
-              <!--Button-->
-              <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-100">
-                  <svg class="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M6 4l10 6-10 6V4z"/>
-                  </svg>
-              </div>
-              </a>
-          </div>
-        </div>
-    </div>
-
-  </div>
-</section>
+  </section>
 </div>
 <!--Main (Tailwind) End-->
 
