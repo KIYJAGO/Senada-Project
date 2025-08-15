@@ -438,9 +438,6 @@
   .w-16 {
     width: calc(var(--spacing) * 16);
   }
-  .w-auto {
-    width: auto;
-  }
   .w-fit {
     width: fit-content;
   }
