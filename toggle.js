@@ -23,7 +23,7 @@ document.addEventListener('click', function (e) {
   }
 });
 
-// Tutup dropdown saat klik di luar
+// Arrow Closed
 document.addEventListener('click', function (e) {
   if (!e.target.closest('.dropdown')) {
     document.querySelectorAll('.dropdown-content').forEach(d => d.classList.add('hidden'));
@@ -216,14 +216,14 @@ window.addEventListener("scroll", function () {
 });
 
 // Video 
-const video = document.getElementById("bgVideo");
-video.addEventListener("click", () => {
-  if (video.paused) {
-    video.play();
-  } else {
-    video.pause();
-  }
-});
+// const video = document.getElementById("bgVideo");
+// video.addEventListener("click", () => {
+//   if (video.paused) {
+//     video.play();
+//   } else {
+//     video.pause();
+//   }
+// });
 
 // Contact
 document.querySelectorAll('.faq-btn').forEach((btn) => {
@@ -241,3 +241,30 @@ document.querySelectorAll('.faq-btn').forEach((btn) => {
   });
 });
 
+// Card Animation
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".card");
+  let revealedCount = 0;
+  const batchSize = 3;
+
+  function revealNextBatch() {
+    const nextCards = Array.from(cards).slice(revealedCount, revealedCount + batchSize);
+    nextCards.forEach((card, i) => {
+      setTimeout(() => {
+        card.classList.remove("opacity-0", "translate-y-10");
+      }, i * 150); // Delay
+    });
+    revealedCount += batchSize;
+  }
+
+  // 3 First Card
+  revealNextBatch();
+
+  // Saat scroll ke bawah, cek apakah sudah dekat bottom, baru munculkan lagi
+  window.addEventListener("scroll", () => {
+    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+    if (scrollTop + clientHeight >= scrollHeight - 400) {
+      revealNextBatch();
+    }
+  });
+});

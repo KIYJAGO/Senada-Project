@@ -160,7 +160,7 @@ nav {
 
 @media (max-width: 768px) {
   .side-menu .top {
-    gap: 6px !important;
+    gap: 8px !important;
   }
 }
 
@@ -204,6 +204,12 @@ nav {
   align-items: center;
   text-decoration: none; 
   color: inherit; 
+}
+
+@media (max-width: 768px) {
+  .contact-item a {
+    gap: 1px;
+  }
 }
 
 .contact-item i {

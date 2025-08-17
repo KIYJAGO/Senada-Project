@@ -20,33 +20,46 @@
   </div>
 
 <div class="menu-container" id="topNav">
-  <div class="dropdown relative hidden md:block">
-    <button class="dropdown-toggle flex items-center gap-1" onclick="toggleDropdown('photoDropdown', this)">
-      Photography
+  <div class="dropdown relative hidden md:block group">
+    <button class="dropdown-toggle flex items-center gap-1 relative pb-1" onclick="toggleDropdown('photoDropdown', this)">
+
+      <span class="relative inline-block">
+        Photography
+        <span class="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
+      </span>
+
       <span class="arrow">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 transform transition-transform duration-300 origin-center">
-          <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          class="w-5 h-5 transform transition-transform duration-300 origin-center">
+          <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
         </svg>
       </span>
     </button>
   
     <div id="photoDropdown" class="dropdown-content hidden absolute mt-2 bg-white shadow-lg rounded-sm">
-      <a href="Pre-Wedding.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Pre Wedding</a>
       <a href="Wedding.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Wedding</a>
+      <a href="Pre-Wedding.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Pre Wedding</a>
     </div>
   </div>
 
-  <div class="dropdown relative hidden md:block">
-    <button class="dropdown-toggle flex items-center gap-1" onclick="toggleDropdown('videoDropdown', this)">
-      Videography
+  <div class="dropdown relative hidden md:block group">
+    <button class="dropdown-toggle flex items-center gap-1 relative pb-1" onclick="toggleDropdown('videoDropdown', this)">
+      
+      <span class="relative inline-block">
+        Videography
+        <span class="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
+      </span>
+  
       <span class="arrow">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 transform transition-transform duration-300 origin-center">
-          <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          class="w-5 h-5 transform transition-transform duration-300 origin-center">
+          <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
         </svg>
       </span>
     </button>
-    <div id="videoDropdown" class="dropdown-content hidden absolute left-0 mt-2 bg-white shadow-lg rounded-sm">
-      <a href="Vid-Wedding.html">Wedding</a>
+  
+    <div id="videoDropdown" class="dropdown-content hidden absolute mt-2 bg-white shadow-lg rounded-sm">
+      <a href="Vid-Wedding.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Wedding</a>
     </div>
   </div>
 
@@ -163,7 +176,7 @@
 <!--Main End-->
 
 <!--Footer Begin-->
-<footer class="bg-white border-t border-dashed border-gray-400 mt-10">
+<footer class="bg-white border-t border-dashed border-gray-400 mt-6">
   <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-start gap-8">
 
     <div>
