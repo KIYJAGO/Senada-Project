@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senada Pictures</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="src/output.css">
+  <link rel="icon" href="IMG/Logo/Vector Logo BLACK.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+<!--Navbar Begin-->
+<nav id="navbar" class="fixed flex w-full z-50 shadow-md bg-white justify-between transitiion-all duration-300">
+  <div class="h-12 flex items-center md:px-1">
+    <a href="index.html" id="topBarLogo">
+      <img src="IMG/Logo/SENADA Resize.png" alt="Logo" class="h-24 py-1 object-contain">
+    </a>
+  </div>
+
+<div class="menu-container" id="topNav">
+  <div class="dropdown relative hidden md:block group">
+    <button class="dropdown-toggle flex items-center gap-1 relative pb-1" onclick="toggleDropdown('photoDropdown', this)">
+
+      <span class="relative inline-block">
+        Photography
+        <span class="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
+      </span>
+
+      <span class="arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          class="w-5 h-5 transform transition-transform duration-300 origin-center">
+          <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
+        </svg>
+      </span>
+    </button>
+  
+    <div id="photoDropdown" class="dropdown-content hidden absolute mt-2 bg-white shadow-lg rounded-sm">
+      <a href="Wedding.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Wedding</a>
+      <a href="Pre-Wedding.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Pre Wedding</a>
+    </div>
+  </div>
+
+  <div class="dropdown relative hidden md:block group">
+    <button class="dropdown-toggle flex items-center gap-1 relative pb-1" onclick="toggleDropdown('videoDropdown', this)">
+      
+      <span class="relative inline-block">
+        Videography
+        <span class="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
+      </span>
+  
+      <span class="arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          class="w-5 h-5 transform transition-transform duration-300 origin-center">
+          <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
+        </svg>
+      </span>
+    </button>
+  
+    <div id="videoDropdown" class="dropdown-content hidden absolute mt-2 bg-white shadow-lg rounded-sm">
+      <a href="Vid-Wedding.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Wedding</a>
+    </div>
+  </div>
+
+  <div id="hamburgerButton" class="hamburger md:block px-1" onclick="openSidebar()">☰</div>
+</div>
+</nav>
+<!--Navbar End-->
+
+<!--Side Menu Begin-->
+<div class="side-menu fixed" id="sideMenu">
+  <div class="top">
+    <div>
+      <button class="btn-close font-bold cursor-pointer mb-2 md:mb-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 md:size-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>        
+      </button>
+    </div>
+    <a href="Photography.html" class="relative group">
+      <span class="pb-1">Photography</span>
+      <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
+    </a>    
+    <a href="Videography.html" class="relative group">
+      <span class="pb-1">Videography</span>
+      <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
+    </a>
+      <a href="About.html" class="relative group">
+        <span class="pb-1">About</span>
+        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
+      </a>
+      <a href="Service.html" class="relative group">
+        <span>Service</span>
+        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
+      </a>
+      <a href="FAQ.html" class="relative group">
+        <span>FAQ</span>
+        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
+      </a>
+  </div>
+  <div class="bottom">
+    <div class="contact-item">
+      <a href="https://wa.me/+6285339047862" target="_blank" class="icon"><i class="fa-brands fa-whatsapp"></i><span>+628123456789</span></a>
+    </div>
+    <div class="contact-item">
+      <a href="https://www.instagram.com/senadapictures?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="icon"><i class="fa-brands fa-instagram"></i><span>@senadapictures</span></a>
+    </div>
+    <div class="contact-item">
+      <a href="https://maps.app.goo.gl/pJCjfqzjXT8QCr5k9" target="_blank" class="icon"><i class="fa-solid fa-location-dot"></i><span>Jl. Uluwatu II No.54, Jimbaran</span></a>
+    </div>
+    <div class="contact-item">
+      <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="icon"><i class="fa-regular fa-envelope"></i><span>senadapictures@gmail.com</span></a>
+    </div>
+    <div class="powered font-poppins mt-15">Bali 80361 - Indonesia
+      <p class="mt-1 md:mt-2">&copy; Powered by | Photos by | Terms of Service | Privacy Policy</p>
+    </div>
+  </div>
+</div>
+
+<div id="overlay" class="overlay fixed inset-0 bg-black/45 hidden z-101"></div>
+<!--Side Menu End-->
+
+<!--Main Content Begin-->
+<div id="firstContent">
+    <div class="w-full max-w-8xl aspect-video">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/CGoxTMkNbmQ?si=9QInEiXA5QwR_CrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      
+      <section class="max-w-4xl mx-auto px-4 pt-10 pb-10">
+        <p class="text-[11px] uppercase tracking-widest text-gray-500 mb-6 font-poppins">
+          JUL 25, 2025 | BY DWIKI
+        </p>
+        <h1 class="text-3xl font-semibold text-gray-900 mb-8">
+          Courtesy of Putri & Faza
+        </h1>
+        <p class="text-gray-700 text-base text-justify mx-8 leading-relaxed mb-5">
+          There are weddings, and then there are experiences that stay with you. Their celebration at Intercontinental Pondok Indah was exactly that, and somehow even more.
+        </p>
+      
+        <p class="text-gray-700 text-base text-justify mx-8 leading-relaxed mb-5">
+          From the start, this wedding was meant to be felt. Guests stepped into a garden estate that looked like something out of a dream. The scent of fresh white blooms mixed gently with the ocean breeze. Soft music played in the background, blending with the sound of waves crashing below. Sunlight slipped through the clouds, wrapping the entire day in a golden glow.
+        </p>
+        
+        <p class="text-gray-700 text-base text-justify mx-8 leading-relaxed mb-5">
+          From the start, their wedding was meant to be felt. Guests stepped into a venue that looked like something out of a dream. The scent of fresh white blooms mixed gently with the warm evening air. Soft music played in the background, blending with the hum of conversations and laughter. Sunlight slipped through the clouds, wrapping the entire day in a golden glow.
+        </p>
+      
+        <p class="text-gray-700 text-base text-justify mx-8 leading-relaxed mb-5">
+          They appeared like a dream themselves stunning, glowing, and every bit the couple you imagine in fairytales. Her dress caught the light with each step, and he couldn't take his eyes off her. When they met under the floral arch to say their vows, it felt like the world quietly paused for them.
+        </p>
+          
+        <p class="text-gray-700 text-base text-justify mx-8 leading-relaxed mb-5">
+          Then came the night. Fire lit up the sky, laughter echoed across the tables, and music pulled everyone to the dance floor. The elegant ceremony gave way to a wildly fun and unforgettable party. Shoes were kicked off, ties were loosened, and arms flew up in pure joy. Even the bride let loose and danced like no one was watching.
+        </p>
+        
+        <p class="text-gray-700 text-base text-justify mx-8 leading-relaxed">
+          Let it be remembered that Putri and Faza once painted a special day with a celebration that touched every sense, filled with a million memories enough to live on for years to come.
+        </p>
+      </section>
+</div>
+
+<!--Content 3-->
+<div id="thirdContent">
+    <div class="flex px-5 pt-12 md:px-12 lg:px-38">
+      <h2 class="text-[15px] md:text-[18px] border-b-1 border-black transition-all duration-200 hover:border-b-4 active:border-b-4 active:text-black inline-block">
+        Recent Posts
+      </h2>    
+    </div>
+    
+    <section class="max-w-6xl mx-auto px-14 md:px-12 mt-8 mb-12">
+  
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 md:gap-12 rounded-s-lg">
+  
+        <!--Cards-->
+        <div>
+          <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+          <img src="IMG/Background 1.jpg" alt="Bride" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+            <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
+                <a href="Content-Vid.html" class="absolute inset-0 flex items-center justify-center">
+                <!--Button-->
+                <div class="w-10 h-10 md:w-16 md:h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-100">
+                    <svg class="w-6 h-6 md:w-6 md:h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M6 4l10 6-10 6V4z"/>
+                    </svg>
+                </div>
+                </a>
+            </div>
+            </div>
+        </div>
+  
+        <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+          <a href="Content.html">
+            <img src="IMG/Background 2.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+            <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+              <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-32">
+                <p>KIYJAGO</p>
+                <p>Walk of Love</p>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+        <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+          <a href="Content.html">
+            <img src="IMG/Background 3.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+            <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+              <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-32">
+                <p>KIYJAGO</p>
+                <p>Walk of Love</p>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+        <div>
+          <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+          <img src="IMG/Background 4.jpg" alt="Bride" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+            <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
+                <a href="Content-Vid.html" class="absolute inset-0 flex items-center justify-center">
+                <!--Button-->
+                <div class="w-10 h-10 md:w-16 md:h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-100">
+                  <svg class="w-6 h-6 md:w-6 md:h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M6 4l10 6-10 6V4z"/>
+                  </svg>
+              </div>
+                </a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="hidden lg:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+          <a href="Content.html">
+            <img src="IMG/Background 5.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+            <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+              <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-32">
+                <p>KIYJAGO</p>
+                <p>Walk of Love</p>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+        <div class="hidden lg:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+          <a href="Content.html">
+            <img src="IMG/Background 6.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+            <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+              <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-32">
+                <p>KIYJAGO</p>
+                <p>Walk of Love</p>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+        <div class="hidden lg:block md:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+          <a href="Content.html">
+            <img src="IMG/Background 7.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+            <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+              <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-32">
+                <p>KIYJAGO</p>
+                <p>Walk of Love</p>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+        <div>
+          <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+          <img src="IMG/Background 8.jpg" alt="Bride" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+            <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
+                <a href="Content-Vid.html" class="absolute inset-0 flex items-center justify-center">
+                <!--Button-->
+                <div class="w-10 h-10 md:w-16 md:h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-100">
+                  <svg class="w-6 h-6 md:w-6 md:h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M6 4l10 6-10 6V4z"/>
+                  </svg>
+              </div>
+                </a>
+            </div>
+            </div>
+        </div>
+  
+        <div class="hidden lg:block md:block relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+          <a href="Content.html">
+            <img src="IMG/Background 9.jpg" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+            <div class="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center">
+              <div class="text-black text-sm/2 leading-tight font-medium p-4 pt-32">
+                <p>KIYJAGO</p>
+                <p>Walk of Love</p>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+        <div>
+          <div class="relative aspect-square overflow-hidden rounded-lg group opacity-0 translate-y-10 transition-all duration-700 ease-out reveal z-100">
+          <img src="IMG/Background 10.jpg" alt="Bride" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300">
+            <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
+                <a href="Content-Vid.html" class="absolute inset-0 flex items-center justify-center">
+                <!--Button-->
+                <div class="w-10 h-10 md:w-16 md:h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-100">
+                  <svg class="w-6 h-6 md:w-6 md:h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M6 4l10 6-10 6V4z"/>
+                  </svg>
+              </div>
+                </a>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </section>
+</div>
+<!--Main Content End-->
+
+<!--Footer Begin-->
+<footer class="bg-white border-t border-dashed border-gray-400 mt-10">
+  <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-start gap-8">
+
+    <div>
+      <a href="index.html">
+        <img src="IMG/Logo/NEW SENADA PICTURES LOGO.png" alt="Senada Pictures" class="h-20 mb-2">
+      </a>
+    </div>
+
+    <div class="text-sm/5 text-gray-600">
+      <p class="text-xs mb-1">by appointment only</p>
+      <p class="text-xs mb-1"><a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="text-gray-800">senadapictures@gmail.com</a></p>
+      <p class="text-xs mb-1">Jl. Uluwatu II No.54, Jimbaran, Kec. Kuta Sel., Kabupaten Badung</p>
+      <p class="text-xs mb-1">Bali 80361, Indonesia</p>
+    </div>
+
+    <div class="flex space-x-4 text-gray-500 text-2xl">
+      <a href="https://wa.me/+6285339047862" target="_blank" class="hover:text-black"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/senadapictures?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-black"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/" target="_blank" class="hover:text-black "><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.youtube.com/" target="_blank" class="hover:text-black"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+
+  <div class="text-center text-xs text-gray-500 pb-6">
+    &copy; Senada Pictures 2025
+  </div>
+</footer>
+<!--Footer End-->
+
+<!--Toggle Script-->
+<script src="toggle.js"></script>
+
+</body>
+</html>

@@ -160,7 +160,7 @@ nav {
 
 @media (max-width: 768px) {
   .side-menu .top {
-    gap: 8px !important;
+    gap: 12px !important;
   }
 }
 

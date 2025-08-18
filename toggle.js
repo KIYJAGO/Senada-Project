@@ -241,30 +241,25 @@ document.querySelectorAll('.faq-btn').forEach((btn) => {
   });
 });
 
-// Card Animation
+// Card Animation IntersectionObserver
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".card");
-  let revealedCount = 0;
-  const batchSize = 3;
 
-  function revealNextBatch() {
-    const nextCards = Array.from(cards).slice(revealedCount, revealedCount + batchSize);
-    nextCards.forEach((card, i) => {
-      setTimeout(() => {
-        card.classList.remove("opacity-0", "translate-y-10");
-      }, i * 150); // Delay
-    });
-    revealedCount += batchSize;
-  }
-
-  // 3 First Card
-  revealNextBatch();
-
-  // Saat scroll ke bawah, cek apakah sudah dekat bottom, baru munculkan lagi
-  window.addEventListener("scroll", () => {
-    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-    if (scrollTop + clientHeight >= scrollHeight - 400) {
-      revealNextBatch();
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove("opacity-0", "translate-y-10");
+          obs.unobserve(entry.target); // stop observe setelah animasi
+        }
+      });
+    },
+    {
+      threshold: 0.4, // muncul saat 20% card masuk layar
     }
+  );
+
+  cards.forEach((card) => {
+    observer.observe(card);
   });
 });
