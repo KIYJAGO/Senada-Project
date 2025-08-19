@@ -84,6 +84,20 @@ document.addEventListener('DOMContentLoaded', function () {
   overlay?.addEventListener('click', closeSideMenu);
 });
 
+// Sidebar Mobile
+function toggleMobileDropdown(contentId, arrowId) {
+  const content = document.getElementById(contentId);
+  const arrow = document.getElementById(arrowId);
+
+  if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+    content.style.maxHeight = "0px"; // tutup
+  } else {
+    content.style.maxHeight = content.scrollHeight + "px"; // buka sesuai tinggi asli
+  }
+
+  arrow.classList.toggle("rotate-180");
+}
+
 // Close Right-Bar
 document.addEventListener('click', function(e) {
   if (sideMenu.classList.contains('open') && !sideMenu.contains(e.target) && e.target !== hamburgerButton) {

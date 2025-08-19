@@ -160,7 +160,7 @@ nav {
 
 @media (max-width: 768px) {
   .side-menu .top {
-    gap: 12px !important;
+    gap: 14px !important;
   }
 }
 
@@ -176,6 +176,16 @@ nav {
   .side-menu a {
     font-size: 18px !important;
   }
+}
+
+.side-mob a {
+  font-size: 15px !important;
+  font-weight: 400;
+}
+
+.dropdown-transition {
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
 }
 
 .side-menu .bottom {
