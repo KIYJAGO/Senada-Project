@@ -100,6 +100,14 @@ nav {
   color: #050505;
 }
 
+/* Main */
+.card.active .card-overlay {
+  opacity: 1 !important;
+}
+.card.active img {
+  transform: scale(1.05);
+}
+
 /* Side Menu */
 .hamburger {
   font-size: 30px;
@@ -179,7 +187,7 @@ nav {
 }
 
 .side-mob a {
-  font-size: 15px !important;
+  font-size: 16px !important;
   font-weight: 400;
 }
 

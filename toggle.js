@@ -90,9 +90,9 @@ function toggleMobileDropdown(contentId, arrowId) {
   const arrow = document.getElementById(arrowId);
 
   if (content.style.maxHeight && content.style.maxHeight !== "0px") {
-    content.style.maxHeight = "0px"; // tutup
+    content.style.maxHeight = "0px";
   } else {
-    content.style.maxHeight = content.scrollHeight + "px"; // buka sesuai tinggi asli
+    content.style.maxHeight = content.scrollHeight + "px";
   }
 
   arrow.classList.toggle("rotate-180");
@@ -116,7 +116,7 @@ document.querySelectorAll('.faq-btn').forEach(btn =>
     btn.addEventListener('click', () => { 
       const content = btn.nextElementSibling; const icon = btn.querySelector('svg'); content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px'; icon.classList.toggle('rotate-180'); 
     }); 
-  }); 
+  });
 
 // Overlay & Navbar Arrow
 let lastScrollTop = 0;
@@ -126,12 +126,12 @@ window.addEventListener("scroll", function () {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
   if (scrollTop > lastScrollTop) {
-    // Scroll ke bawah → sembunyikan semua dropdown
+    // Scroll - Close
     dropdowns.forEach(dropdown => {
       if (!dropdown.classList.contains("hidden")) {
         dropdown.classList.add("hidden");
 
-        // Balikkan ikon panah
+        // Rotate
         const arrow = dropdown.parentElement.querySelector('.dropdown-toggle .arrow svg');
         arrow?.classList.remove("rotate-180");
       }
@@ -207,6 +207,39 @@ window.addEventListener('scroll', () => {
   lastScrollY = window.scrollY;
 });
 
+// Hover Card Animation
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".card");
+
+  // Device Support Hover
+  const isHoverable = window.matchMedia("(hover: hover)").matches;
+
+  if (isHoverable) {
+    console.log("Desktop mode - hover jalan, klik langsung ke link");
+  } else {
+
+    cards.forEach(card => {
+      card.addEventListener("click", (e) => {
+        const alreadyActive = card.classList.contains("active");
+
+        cards.forEach(c => c.classList.remove("active"));
+
+        if (!alreadyActive) {
+
+          e.preventDefault();
+          card.classList.add("active");
+        } 
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".card")) {
+        cards.forEach(c => c.classList.remove("active"));
+      }
+    });
+  }
+});
+
 // Main Content Animation
 const reveals = document.querySelectorAll('.reveal');
       
@@ -226,18 +259,8 @@ window.addEventListener('scroll', () => {
 window.addEventListener("scroll", function () {
   const scrollY = window.scrollY;
   const parallax = document.getElementById("parallax");
-  parallax.style.transform = `translateY(${scrollY * 0.3}px)`;
+  parallax.style.transform = `translateY(${scrollY * 0.35}px)`;
 });
-
-// Video 
-// const video = document.getElementById("bgVideo");
-// video.addEventListener("click", () => {
-//   if (video.paused) {
-//     video.play();
-//   } else {
-//     video.pause();
-//   }
-// });
 
 // Contact
 document.querySelectorAll('.faq-btn').forEach((btn) => {
@@ -255,7 +278,7 @@ document.querySelectorAll('.faq-btn').forEach((btn) => {
   });
 });
 
-// Card Animation IntersectionObserver
+// Card Animation Intersection Observer
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".card");
 
@@ -264,12 +287,12 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.remove("opacity-0", "translate-y-10");
-          obs.unobserve(entry.target); // stop observe setelah animasi
+          obs.unobserve(entry.target); // Stop Observe
         }
       });
     },
     {
-      threshold: 0.4, // muncul saat 20% card masuk layar
+      threshold: 0.4, // 40% Appear
     }
   );
 
