@@ -259,7 +259,7 @@ window.addEventListener('scroll', () => {
 window.addEventListener("scroll", function () {
   const scrollY = window.scrollY;
   const parallax = document.getElementById("parallax");
-  parallax.style.transform = `translateY(${scrollY * 0.35}px)`;
+  parallax.style.transform = `translateY(${scrollY * 0.3}px)`;
 });
 
 // Contact
@@ -280,7 +280,7 @@ document.querySelectorAll('.faq-btn').forEach((btn) => {
 
 // Card Animation Intersection Observer
 document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".card");
+  const cards = document.querySelectorAll(".cards");
 
   const observer = new IntersectionObserver(
     (entries, obs) => {

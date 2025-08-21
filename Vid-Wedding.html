@@ -72,16 +72,33 @@
 <div class="side-menu fixed" id="sideMenu">
   <div class="top">
     <div>
-      <button class="btn-close font-bold cursor-pointer mb-2 md:mb-2">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 md:size-5">
+      <button class="btn-close font-bold cursor-pointer md:mb-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 md:size-5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>        
       </button>
     </div>
-    <a href="Photography.html" class="relative group">
+
+    <a href="Photography.html" class="relative group hidden md:block">
       <span class="pb-1">Photography</span>
       <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
-    </a>    
+    </a>
+
+    <!--Mobile-->
+    <div class="md:hidden">
+      <button onclick="toggleMobileDropdown('photoMobile','arrowPhoto')" class="relative flex items-center gap-1 w-full text-left">
+        <span class="pb-1 font-bold text-[17.5px]">Photography</span>
+          <svg id="arrowPhoto" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+      </button>
+    
+      <div id="photoMobile" class="side-mob dropdown-transition max-h-0 flex-col pl-6">
+        <a href="Pre-Wedding.html" class="mt-3 pb-4 block font-light text-gray-700 text-sm">// Pre - Wedding</a>
+        <a href="Wedding.html" class="block text-gray-700 text-sm">// Wedding</a>
+      </div>
+    </div>  
+
     <a href="Videography.html" class="relative group">
       <span class="pb-1">Videography</span>
       <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
@@ -122,11 +139,11 @@
 <!--Side Menu End-->
 
 <!--Main Begin-->
-<h2 class="text-center text-xl tracking-[0.3em] font-medium uppercase pt-30">Wedding - Cinematography</h2>
+<h2 class="text-center text-lg tracking-[0.2em] font-medium uppercase pt-30">Cinematography of Wedding</h2>
 <!--Cards-->
 <div id="cardContainer" class="grid grid-cols-1 md:grid-cols-3 gap-10 px-6 max-w-7xl mx-auto py-12 pb-6">
   
-  <div class="card opacity-0 translate-y-10 transition-all duration-700 ease-out">
+  <div class="cards opacity-0 translate-y-10 transition-all duration-700 ease-out">
     <div class="group relative">
       <img src="IMG/Background 1.jpg" alt="Gallery Images" class="w-full aspect-[4/5] object-cover">
       <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
@@ -147,7 +164,7 @@
     <p class="text-sm text-gray-700 mt-1">Learn from our couple! Here's how to marry your soulmate and turn the most important day of your life into the most unforgettable one as well.</p>
   </div>
 
-  <div class="card opacity-0 translate-y-10 transition-all duration-700 ease-out">
+  <div class="cards opacity-0 translate-y-10 transition-all duration-700 ease-out">
     <div class="group relative">
       <img src="IMG/Background 2.jpg" alt="Gallery Images" class="w-full aspect-[4/5] object-cover">
       <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
@@ -168,7 +185,7 @@
     <p class="text-sm text-gray-700 mt-1">Learn from our couple! Here's how to marry your soulmate and turn the most important day of your life into the most unforgettable one as well.</p>
   </div>
 
-  <div class="card opacity-0 translate-y-10 transition-all duration-700 ease-out">
+  <div class="cards opacity-0 translate-y-10 transition-all duration-700 ease-out">
     <div class="group relative">
       <img src="IMG/Background 3.jpg" alt="Gallery Images" class="w-full aspect-[4/5] object-cover">
       <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
