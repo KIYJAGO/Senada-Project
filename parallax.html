@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll Animation</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Courgette:400,700&display=swap");
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Courgette", cursive;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      height: 100vh;
+      color: #eee;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+      background: url("IMG/Background 1.jpg") no-repeat center center/cover;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    header .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      height: 100vh;
+      font-size: 5rem;
+      background: #fcdb6d;
+      color: #0056a7;
+    }
+
+    .animate-me {
+      animation: bounceIn 2s ease-in-out forwards;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes bounceIn {
+      0% {
+        transform: scale(0.1);
+        opacity: 0;
+      }
+      60% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="container">
+        <h3>Welcome</h3>
+        <p>Scroll to see how cool I am!</p>
+      </div>
+    </header>
+
+    <section>
+      <h3 id="coolText">Cool like you</h3>
+    </section>
+  </main>
+
+  <script>
+    window.addEventListener("scroll", function() {
+      const distance = window.scrollY;
+
+      document.querySelector("header").style.transform =
+        `translateY(${distance * 1}px)`;
+      document.querySelector(".container").style.transform =
+        `translateY(${distance * 0.3}px)`;
+
+      const coolText = document.getElementById("coolText");
+      const sectionTop = coolText.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      // animasi jalan sekali saat teks muncul di layar
+      if (sectionTop < windowHeight && !coolText.classList.contains("animate-me")) {
+        coolText.classList.add("animate-me");
+      }
+    });
+  </script>
+</body>
+</html>

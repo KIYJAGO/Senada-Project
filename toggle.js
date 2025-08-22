@@ -259,7 +259,7 @@ window.addEventListener('scroll', () => {
 window.addEventListener("scroll", function () {
   const scrollY = window.scrollY;
   const parallax = document.getElementById("parallax");
-  parallax.style.transform = `translateY(${scrollY * 0.3}px)`;
+  parallax.style.transform = `translateY(${scrollY * 0.33}px)`;
 });
 
 // Contact
