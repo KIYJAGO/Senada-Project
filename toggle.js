@@ -199,12 +199,21 @@ let lastScrollY = window.scrollY;
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > lastScrollY) {
-    navbar.style.transform = 'translateY(-100%)';
-  } else {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll <= 0) {
+    //Stop Hide
     navbar.style.transform = 'translateY(0)';
+    return;
   }
-  lastScrollY = window.scrollY;
+
+  if (currentScroll > lastScrollY) {
+    navbar.style.transform = 'translateY(-100%)'; // Scroll Up
+  } else {
+    navbar.style.transform = 'translateY(0)'; // Scroll Bottom
+  }
+
+  lastScrollY = currentScroll;
 });
 
 // Hover Card Animation
